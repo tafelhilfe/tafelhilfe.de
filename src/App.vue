@@ -1,16 +1,5 @@
 <template>
   <div id="app">
-    <TafelForm/>
+    <router-view />
   </div>
 </template>
-
-<script>
-import TafelForm from './components/tafel-form.vue'
-
-export default {
-  name: 'App',
-  components: {
-    TafelForm
-  }
-}
-</script>

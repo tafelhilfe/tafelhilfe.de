@@ -12,6 +12,9 @@
     },
     {
       "option": "Lebensmittel sortieren, säubern, entsorgen, vorpacken"
+    },
+    {
+      "option": "Wir haben zu, aber wollen wieder öffnen"
     }
   ],
   "textarea": "Sonstiges",
@@ -26,5 +29,6 @@
   ],
   "info": "Bitte überprüfen Sie Ihre Angaben vor dem einreichen!",
   "submit": "Hilfegesuch stellen",
-  "success": "<p>Vielen Dank für Ihre Anfrage,</p><p>ein Hilfegesuch wurde auf <a href=\"https://www.quarantaenehelden.org\" target=\"_blank\">quarantaenehelden.org</a> und <a href=\"https://www.nebenan.de\" target=\"_blank\">nebenan.de</a> erstellt.</p>"
+  "success": "<p><strong>Vielen Dank für Ihre Anfrage,</strong></p><p>ein Hilfegesuch wurde auf <a href=\"https://www.quarantaenehelden.org\" target=\"_blank\" class=\"text-blue-600\">quarantaenehelden.org</a> und <a href=\"https://www.nebenan.de\" target=\"_blank\" class=\"text-blue-600\">nebenan.de</a> erstellt.",
+  "error": "Es ist ein Fehler bei der Übertragung aufgetreten, versuchen Sie es bitte später noch einmal!"
 }
