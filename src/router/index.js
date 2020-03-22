@@ -1,30 +1,32 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     component: Home
   },
   {
-    path: '/anfrage',
-    name: 'Anfrage',
-    component: () => import(/* webpackChunkName: "about" */ '../components/tafel-form.vue')
+    path: "/anfrage",
+    name: "Anfrage",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../components/tafel-form-design.vue")
   },
   {
-    path: '/resourcen',
-    name: 'Resourcen',
-    component: () => import(/* webpackChunkName: "about" */ '../views/resourcen.vue')
+    path: "/resourcen",
+    name: "Resourcen",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/resourcen.vue")
   }
-]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes
-})
+});
 
-export default router
+export default router;
