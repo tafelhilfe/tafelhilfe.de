@@ -63,7 +63,8 @@
                     this.address = {"plz": this.plz};
                     for (let i=0; i < this.data.length; i++) {
                         if (this.data[i]['plz'] === this.plz) {
-                            this.address = this.data[i]
+                            this.address = this.data[i];
+                            break
                         }
                     }
                     this.send = false;
