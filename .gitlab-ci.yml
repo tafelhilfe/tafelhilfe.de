@@ -12,9 +12,8 @@ cache:
     - vendor
     
 build:
-  job:
-    only:
-      - dev
+  only:
+    - dev
   stage: build
   script:
     - npm install
