@@ -13,7 +13,7 @@
             >
             <div class="-mr-2 flex items-center md:hidden">
               <button
-                @click="open = true"
+                v-on:click="mobileNavOpen = true"
                 type="button"
                 class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
               >
@@ -45,23 +45,18 @@
             to="/anfrage"
             >Helfer finden</router-link
           >
-          <router-link
-            class="ml-10 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-            to="/resourcen"
-            >Ressourcen</router-link
-          >
         </div>
       </nav>
     </div>
 
     <div
-      x-show="open"
+      v-show="mobileNavOpen"
       style="display: none;"
       class="absolute top-0 inset-x-0 p-2 md:hidden"
     >
       <div
         class="rounded-lg shadow-md transition transform origin-top-right"
-        x-show="open"
+        v-show="mobileNavOpen"
         x-transition:enter="duration-150 ease-out"
         x-transition:enter-start="opacity-0 scale-95"
         x-transition:enter-end="opacity-100 scale-100"
@@ -72,11 +67,11 @@
         <div class="rounded-lg bg-white shadow-xs overflow-hidden">
           <div class="px-5 pt-4 flex items-center justify-between">
             <div>
-              tafelhilfe.de
+              <p class="font-bold">tafelhilfe.de</p>
             </div>
             <div class="-mr-2">
               <button
-                @click="open = false"
+                v-on:click="mobileNavOpen = false"
                 type="button"
                 class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
               >
@@ -107,11 +102,6 @@
               to="/anfrage"
               >Helfer finden</router-link
             >
-            <router-link
-              class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-              to="/resourcen"
-              >Resourcen</router-link
-            >
           </div>
         </div>
       </div>
@@ -121,6 +111,11 @@
 
 <script>
 export default {
-  name: "top-navigation"
+  name: "top-navigation",
+  data() {
+    return {
+      mobileNavOpen: false
+    };
+  }
 };
 </script>
