@@ -38,7 +38,7 @@ deploy-staging:
   environment:
     name: ${CI_COMMIT_REF_SLUG}
     url: http://${STAGING_BUCKET_NAME}.s3-website.${AWS_DEFAULT_REGION}.amazonaws.com/
-    on_stop: clean_s3
+    on_stop: clean_staging
 
 deploy-live:
   only:
@@ -54,7 +54,7 @@ deploy-live:
   environment:
     name: ${CI_COMMIT_REF_SLUG}
     url: http://${LIVE_BUCKET_NAME}.s3-website.${AWS_DEFAULT_REGION}.amazonaws.com/
-    on_stop: clean_s3
+    on_stop: clean_live
 
 clean_staging:
   only:
