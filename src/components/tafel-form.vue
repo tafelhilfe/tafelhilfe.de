@@ -60,7 +60,17 @@
         methods: {
             getAddress() {
                 if (this.plz.length === 5) {
-                    this.address = {"plz": this.plz};
+                    this.address = {
+                        "name": "",
+                        "adresse": "",
+                        "plz": this.plz,
+                        "ort": "",
+                        "ansprechpartner": "",
+                        "tel": "",
+                        "fax": "",
+                        "mail": "",
+                        "url": ""
+                    };
                     for (let i=0; i < this.data.length; i++) {
                         if (this.data[i]['plz'] === this.plz) {
                             this.address = this.data[i];
