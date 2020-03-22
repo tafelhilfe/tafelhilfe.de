@@ -21,6 +21,18 @@ const routes = [
     name: "Resourcen",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/resourcen.vue")
+  },
+  {
+    path: "/impressum",
+    name: "Impressum",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/impressum.vue")
+  },
+  {
+    path: "/datapolicy",
+    name: "Datenschutzerklärung",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/datapolicy.vue")
   }
 ];
 
