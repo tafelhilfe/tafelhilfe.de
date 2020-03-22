@@ -116,11 +116,6 @@
                 to="/anfrage"
                 >Helfer finden</router-link
               >
-              <router-link
-                class="ml-10 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                to="/resourcen"
-                >Resourcen</router-link
-              >
             </div>
           </nav>
         </div>
@@ -178,11 +173,6 @@
                   to="/anfrage"
                   >Helfer finden</router-link
                 >
-                <router-link
-                  class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  to="/resourcen"
-                  >Resourcen</router-link
-                >
               </div>
             </div>
           </div>
@@ -214,16 +204,8 @@
                 <router-link
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-500 hover:bg-green-400 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                   to="/anfrage"
-                  >Helfer finden</router-link
+                  >Helfer finden!</router-link
                 >
-              </div>
-              <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <router-link
-                  to="/resourcen"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-green-500 bg-white hover:text-green-400 focus:outline-none focus:shadow-outline-blue transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                >
-                  Resourcen
-                </router-link>
               </div>
             </div>
           </div>
@@ -368,6 +350,7 @@
         </h2>
         <form class="mt-8 sm:flex">
           <input
+            ref="plz"
             aria-label="Postleizahl"
             type="text"
             required
@@ -375,12 +358,13 @@
             placeholder="PLZ eingeben"
           />
           <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-            <a
-              href="https://www.tafel.de/ueber-uns/die-tafeln/tafel-suche/"
+            <button
+              type="button"
+              v-on:click="findTafel"
               class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-900 hover:bg-green-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
             >
               Tafel finden!
-            </a>
+            </button>
           </div>
         </form>
       </div>
@@ -873,15 +857,18 @@
       </div>
     </div>
     <footerNav />
+    <banner />
   </div>
 </template>
 
 <script>
 import footerNav from "../views/footer";
+import banner from "../components/banner";
 
 export default {
   components: {
-    footerNav
+    footerNav,
+    banner
   },
   data() {
     return {
@@ -893,6 +880,11 @@ export default {
   methods: {
     toggleFAQItem(index) {
       this.openPanel = this.openPanel === index ? null : index;
+    },
+    findTafel() {
+      window.open(
+        `https://www.tafel.de/ueber-uns/die-tafeln/tafel-suche/?tx_wwmap_map%5Baction%5D=list&tx_wwmap_map%5Bcontroller%5D=Locations&tx_wwmap_map%5Bsearch%5D=${this.$refs.plz.value}`
+      );
     }
   }
 };
