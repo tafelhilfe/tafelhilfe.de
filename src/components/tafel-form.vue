@@ -71,14 +71,12 @@
                 }
             },
             sendData() {
-                const qs = require('querystring');
                 for (let i=0; i < this.selectedCheckbox.length; i++) {
                     this.address["option" + (i+1)] = this.selectedCheckbox[i]
                 }
-                this.$http.post('https://aiw6w7f673.execute-api.eu-west-1.amazonaws.com/prod/anfrage', qs.stringify(this.address),{
+                this.$http.post('https://aiw6w7f673.execute-api.eu-west-1.amazonaws.com/prod/anfrage', this.address,{
                    headers: {
-                       'Acess-Control-Allow-Origin': '*',
-                       'Content-Type': 'application/x-www-form-urlencoded'
+                       'x-api-key': 'MQEZ4icN9737oFYkGqmFO1r3e5YvzzU67LmJFave'
                    }
                 })
                 .then((result) => {
