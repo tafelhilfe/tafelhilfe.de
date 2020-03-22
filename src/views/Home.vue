@@ -79,7 +79,9 @@
               class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0"
             >
               <div class="flex items-center justify-between w-full md:w-auto">
-                <p class="text-3xl font-bold">tafelhilfe.de</p>
+                <router-link to="/" class="text-3xl font-bold"
+                  >tafelhilfe.de</router-link
+                >
                 <div class="-mr-2 flex items-center md:hidden">
                   <button
                     v-on:click="mobileNavOpen = true"
