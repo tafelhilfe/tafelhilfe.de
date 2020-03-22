@@ -34,9 +34,8 @@
                 </div>
             </div>
         </form>
-        <div v-else-if="send">
-            <div v-html="options.success"></div>
-        </div>
+        <div class="alert alert-success" role="alert" v-else-if="send" v-html="options.success"></div>
+        <div class="alert alert-warning" role="alert" v-else-if="error" v-html="options.error"></div>
     </div>
 </template>
 
@@ -52,6 +51,7 @@
                 plz: '',
                 show: false,
                 send: false,
+                error: false,
                 options: resources,
                 address: {},
                 selectedCheckbox: []
@@ -80,15 +80,14 @@
                        'x-api-key': 'MQEZ4icN9737oFYkGqmFO1r3e5YvzzU67LmJFave'
                    }
                 })
-                .then((result) => {
-                    console.log(result.data)
+                .then(() => {
+                    this.show = false;
+                    this.send = true
                 })
                 .catch((error) => {
+                    this.error = true;
                     console.log(error)
                 });
-                this.show = false;
-                this.send = true;
-                console.log(this.address)
             }
         }
     }
