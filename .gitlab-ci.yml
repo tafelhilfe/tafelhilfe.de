@@ -10,7 +10,7 @@ variables:
 cache:
   paths:
     - vendor
-    
+
 build:
   only:
     - dev
@@ -23,6 +23,8 @@ build:
       - dist/
 
 deploys3:
+  only:
+    - dev
   image: "python:latest"
   stage: deploy
   dependencies:
@@ -37,6 +39,8 @@ deploys3:
     on_stop: clean_s3
 
 clean_s3:
+  only:
+    - dev
   image: "python:latest"
   stage: deploy
   before_script:
