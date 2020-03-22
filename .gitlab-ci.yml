@@ -11,11 +11,10 @@ cache:
   paths:
     - vendor
     
-job:
-    only:
-        - /dev
-
 build:
+  job:
+    only:
+      - dev
   stage: build
   script:
     - npm install
