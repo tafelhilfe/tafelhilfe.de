@@ -34,9 +34,8 @@
                 </div>
             </div>
         </form>
-        <div v-else-if="send">
-            <div v-html="options.success"></div>
-        </div>
+        <div class="alert alert-success" role="alert" v-else-if="send" v-html="options.success"></div>
+        <div class="alert alert-warning" role="alert" v-else-if="error" v-html="options.error"></div>
     </div>
 </template>
 
@@ -52,6 +51,7 @@
                 plz: '',
                 show: false,
                 send: false,
+                error: false,
                 options: resources,
                 address: {},
                 selectedCheckbox: []
@@ -63,7 +63,8 @@
                     this.address = {"plz": this.plz};
                     for (let i=0; i < this.data.length; i++) {
                         if (this.data[i]['plz'] === this.plz) {
-                            this.address = this.data[i]
+                            this.address = this.data[i];
+                            break
                         }
                     }
                     this.send = false;
@@ -74,10 +75,19 @@
                 for (let i=0; i < this.selectedCheckbox.length; i++) {
                     this.address["option" + (i+1)] = this.selectedCheckbox[i]
                 }
-                //Todo: send data
-                this.show = false;
-                this.send = true;
-                console.log(this.address)
+                this.$http.post('https://aiw6w7f673.execute-api.eu-west-1.amazonaws.com/prod/anfrage', this.address,{
+                   headers: {
+                       'x-api-key': 'MQEZ4icN9737oFYkGqmFO1r3e5YvzzU67LmJFave'
+                   }
+                })
+                .then(() => {
+                    this.show = false;
+                    this.send = true
+                })
+                .catch((error) => {
+                    this.error = true;
+                    console.log(error)
+                });
             }
         }
     }
