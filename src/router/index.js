@@ -14,7 +14,7 @@ const routes = [
     path: "/anfrage",
     name: "Anfrage",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../components/tafel-form-design.vue")
+      import(/* webpackChunkName: "about" */ "../components/tafel-form.vue")
   },
   {
     path: "/resourcen",
