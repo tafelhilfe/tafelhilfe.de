@@ -1,0 +1,30 @@
+{
+  "headline": "Hilfe für die Tafel",
+  "question": "Geben Sie bitte Ihre Postleitzahl ein",
+  "data": "Ihre Daten",
+  "suche": "Sie suchen",
+  "help": [
+    {
+      "option": "Abholung mit Kühlfahrzeug"
+    },
+    {
+      "option": "Lieferung"
+    },
+    {
+      "option": "Lebensmittel sortieren, säubern, entsorgen, vorpacken"
+    }
+  ],
+  "textarea": "Sonstiges",
+  "kontakt": "Wie möchten Sie kontaktiert werden?",
+  "contact": [
+    {
+      "option": "Email"
+    },
+    {
+      "option": "Telefon"
+    }
+  ],
+  "info": "Bitte überprüfen Sie Ihre Angaben vor dem einreichen!",
+  "submit": "Hilfegesuch stellen",
+  "success": "<p>Vielen Dank für Ihre Anfrage,</p><p>ein Hilfegesuch wurde auf <a href=\"https://www.quarantaenehelden.org\" target=\"_blank\">quarantaenehelden.org</a> und <a href=\"https://www.nebenan.de\" target=\"_blank\">nebenan.de</a> erstellt.</p>"
+}
