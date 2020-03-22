@@ -71,10 +71,22 @@
                 }
             },
             sendData() {
+                const qs = require('querystring');
                 for (let i=0; i < this.selectedCheckbox.length; i++) {
                     this.address["option" + (i+1)] = this.selectedCheckbox[i]
                 }
-                //Todo: send data
+                this.$http.post('https://aiw6w7f673.execute-api.eu-west-1.amazonaws.com/prod/anfrage', qs.stringify(this.address),{
+                   headers: {
+                       'Acess-Control-Allow-Origin': '*',
+                       'Content-Type': 'application/x-www-form-urlencoded'
+                   }
+                })
+                .then((result) => {
+                    console.log(result.data)
+                })
+                .catch((error) => {
+                    console.log(error)
+                });
                 this.show = false;
                 this.send = true;
                 console.log(this.address)
