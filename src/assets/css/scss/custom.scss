@@ -10,6 +10,10 @@
 ** import bootstrap vue css
  */
 @import "node_modules/bootstrap-vue/src/index";
+/*
+** import animated css for vue 2
+ */
+@import "node_modules/vue2-animate/src/sass/vue2-animate";
 
 /*
  **import other sass files
