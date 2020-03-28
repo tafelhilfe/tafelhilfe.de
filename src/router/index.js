@@ -33,6 +33,12 @@ const routes = [
     name: "Datenschutzerklärung",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/datapolicy.vue")
+  },
+  {
+    path: "/chris_testseite",
+    name: "Chris Testseite",
+    component: () =>
+        import("../views/chris_testseite")
   }
 ];
 

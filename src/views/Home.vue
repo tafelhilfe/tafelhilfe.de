@@ -116,6 +116,10 @@
                 to="/anfrage"
                 >Helfer finden</router-link
               >
+              <router-link
+                      class="ml-10 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                      to="/chris_testseite">Chris Testseite
+              </router-link>
             </div>
           </nav>
         </div>

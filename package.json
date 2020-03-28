@@ -7,7 +7,7 @@
     "serve": "start npm run scss && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "scss": "node-sass --watch src/assets/css/scss -o src/assets/css"
+    "scss": "node-sass src/assets/css/scss -o src/assets/css && node-sass --watch src/assets/css/scss -o src/assets/css"
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.1.3",
