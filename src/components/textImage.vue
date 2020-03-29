@@ -19,7 +19,7 @@
 </template>
 <script>
     export default {
-        name: "text-image",
+        name: "textImage",
         props: ['tic'],
     }
 </script>

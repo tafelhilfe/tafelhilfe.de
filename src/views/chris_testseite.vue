@@ -1,8 +1,12 @@
 <template>
-    <textImage :tic="tic" />
+    <section>
+        <textImage :tic="tic"/>
+        <textImage :tic="tic2"/>
+    </section>
 </template>
 <script>
     import textImage from "../components/textImage";
+
     export default {
         components: {
             textImage
@@ -12,7 +16,7 @@
                 tic: {
                     headline: "Lorem Ipsum",
                     image: {
-                        src: "@src/assets/images/dummy-400x400-color123456.jpg",
+                        src: "require('./src/assets/images/dummy-400x400-color123456.jpg')",
                         alt: "logo"
                     },
                     text: {
@@ -21,6 +25,21 @@
                         button: {
                             href: "/",
                             label: "Button"
+                        }
+                    }
+                },
+                tic2: {
+                    headline: "Lorem Ipsum 2",
+                    image: {
+                        src: "@src/assets/images/dummy-400x400-color123456.jpg",
+                        alt: "logo 2"
+                    },
+                    text: {
+                        heading: "",
+                        paragraph: "test1234 2",
+                        button: {
+                            href: "/",
+                            label: "Button 2"
                         }
                     }
                 }
