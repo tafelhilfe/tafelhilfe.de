@@ -17,6 +17,9 @@ const options = {
 }
 module.exports = {
     module: {
+        configureWebpack:{
+
+        },
         rules: [
             // ... other rules
             {
@@ -32,6 +35,23 @@ module.exports = {
                 use: [
                     'vue-style-loader',
                     'css-loader'
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            indentedSyntax: true,
+                            // sass-loader version >= 8
+                            sassOptions: {
+                                indentedSyntax: true
+                            }
+                        }
+                    }
                 ]
             }
         ]
