@@ -7,10 +7,10 @@
                     <b-img fluid :src="tic.image.src" :alt="tic.image.alt" />
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-6">
-                <h3 class="text-center" v-if="tic.text.heading !== ''">{{ tic.text.heading }}</h3>
+            <div v-if="tic.text" class="col-sm-12 col-lg-6">
+                <h3 class="text-center" v-if="tic.text.headline !== ''" v-html="tic.text.headline" />
                 <p v-if="tic.text.paragraph !== ''">{{ tic.text.paragraph }}</p>
-                <b-button v-if="tic.text.button.href !== '' && tic.text.button.label !== ''"
+                <b-button v-if="tic.text.button && tic.text.button.href !== '' && tic.text.button.label !== ''"
                           :href="tic.text.button.href">{{ tic.text.button.label }}
                 </b-button>
             </div>
@@ -23,3 +23,61 @@
         props: ['tic'],
     }
 </script>
+<!-- how to use this component + example
+
+Naming tic = text image component
+Usage:
+to fill this component with content:
+    Give the component an name like this:
+        <textImage :tic="yourGivenName"/>
+    then in the script part you can fill the fields with this syntax:
+        yourGivenName: {
+            headline: "",
+            image: {
+                src: require(""),
+                alt: ""
+            },
+            text: {
+                headline: "",
+                paragraph: "",
+                button: {
+                    href: "",
+                    label: ""
+                }
+            }
+        }
+
+As complete .vue example:
+<template>
+    <section>
+        <textImage :tic="yourGivenName"/>
+    </section>
+</template>
+<script>
+    import textImage from "../components/textImage";
+    export default {
+        components: {
+            textImage
+        },
+        data() {
+            return {
+                yourGivenName: {
+                    headline: "",
+                    image: {
+                        src: require(""),
+                        alt: ""
+                    },
+                    text: {
+                        headline: "",
+                        paragraph: "",
+                        button: {
+                            href: "",
+                            label: ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+-->

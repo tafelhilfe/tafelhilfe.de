@@ -5,7 +5,7 @@ import axios from "axios";
 import router from "./router";
 
 import "@/assets/css/tailwind.css";
-import "@/assets/css/custom.css";
+import "@/assets/css/scss/custom.scss";
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;

@@ -1,5 +1,5 @@
 {
-  "name": "tafel",
+  "name": "tafelhilfe",
   "version": "0.1.0",
   "private": false,
   "license": "SEE LICENSE IN license.txt",
@@ -10,8 +10,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "scss": "node-sass src/assets/css/scss -o src/assets/css && node-sass --watch src/assets/css/scss -o src/assets/css"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.1.3",
