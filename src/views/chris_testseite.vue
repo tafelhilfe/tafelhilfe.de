@@ -14,10 +14,10 @@
         data() {
             return {
                 tic: {
-                    headline: "Lorem Ipsum",
+                    headline: "<h3>Lorem Ipsum</h3>",
                     image: {
-                        src: "require('./src/assets/images/dummy-400x400-color123456.jpg')",
-                        alt: "logo"
+                        src: "",
+                        alt: ""
                     },
                     text: {
                         heading: "",
@@ -31,7 +31,7 @@
                 tic2: {
                     headline: "Lorem Ipsum 2",
                     image: {
-                        src: "@src/assets/images/dummy-400x400-color123456.jpg",
+                        src: "~/assets/images/dummy-400x400-color123456.jpg",
                         alt: "logo 2"
                     },
                     text: {

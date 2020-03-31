@@ -1,10 +1,10 @@
 <template>
     <div class="container text-image-component">
-        <h2 class="text-center" v-if="tic.headline !== ''">{{ tic.headline }}</h2>
+        <h2 class="text-center" v-if="tic.headline !== ''" v-html="tic.headline" />
         <div class="row">
-            <div class="col-sm-12 col-lg-6">
+            <div class="col-sm-12 col-lg-6" v-if="tic.image && tic.image.src !== ''">
                 <div class="image-container">
-                    <b-img v-if="tic.image.src !== ''" :src="tic.image.src" fluid :alt="tic.image.alt"></b-img>
+                    <b-img fluid :src="tic.image.src" :alt="tic.image.alt" />
                 </div>
             </div>
             <div class="col-sm-12 col-lg-6">
