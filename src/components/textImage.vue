@@ -1,26 +1,26 @@
 <template>
-    <div class="container text-image-component">
-        <h2 class="text-center" v-if="tic.headline !== ''" v-html="tic.headline" />
-        <div class="row">
-            <div class="col-sm-12 col-lg-6" v-if="tic.image && tic.image.src !== ''">
+    <b-container class="text-image-component">
+        <h2 class="text-center" v-if="tic.headline !== ''" v-html="tic.headline"/>
+        <b-row>
+            <b-col lg v-if="tic.image && tic.image.src !== ''">
                 <div class="image-container">
-                    <b-img fluid :src="tic.image.src" :alt="tic.image.alt" />
+                    <b-img-lazy center fluid :src="tic.image.src" :alt="tic.image.alt"/>
                 </div>
-            </div>
-            <div v-if="tic.text" class="col-sm-12 col-lg-6">
-                <h3 class="text-center" v-if="tic.text.headline !== ''" v-html="tic.text.headline" />
+            </b-col>
+            <b-col lg v-if="tic.text">
+                <h3 class="text-center" v-if="tic.text.headline !== ''" v-html="tic.text.headline"/>
                 <p v-if="tic.text.paragraph !== ''">{{ tic.text.paragraph }}</p>
                 <b-button v-if="tic.text.button && tic.text.button.href !== '' && tic.text.button.label !== ''"
                           :href="tic.text.button.href">{{ tic.text.button.label }}
                 </b-button>
-            </div>
-        </div>
-    </div>
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 <script>
     export default {
         name: "textImage",
-        props: ['tic'],
+        props: ['tic']
     }
 </script>
 <!-- how to use this component + example

@@ -51,3 +51,8 @@
     </div>
   </div>
 </template>
+<script>
+  export default {
+    name: "footerDefault"
+  }
+</script>
