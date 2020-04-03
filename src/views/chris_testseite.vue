@@ -1,14 +1,29 @@
 <template>
-    <section>
-        <textImage :tic="tic"/>
-        <textImage :tic="tic2"/>
-    </section>
+    <div class="chris_testseite">
+        <top-navigation />
+        <transition
+                name="bounce"
+                enter-active-class="bounceInLeft"
+                leave-active-class="bounceOutRight"
+        >
+            <p v-if="show">hello</p>
+        </transition>
+        <section>
+            <textImage :tic="tic"/>
+            <textImage :tic="tic2"/>
+        </section>
+        <footer-default/>
+    </div>
 </template>
 <script>
     import textImage from "../components/textImage";
+    import TopNavigation from "./top-navigation";
+    import FooterDefault from "./footer";
 
     export default {
         components: {
+            FooterDefault,
+            TopNavigation,
             textImage
         },
         data() {

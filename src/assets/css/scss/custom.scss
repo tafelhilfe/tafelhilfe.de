@@ -1,7 +1,11 @@
 /*
+** import bootstrap functions for bootstrap variables to work
+ */
+@import "node_modules/bootstrap/scss/functions";
+/*
 ** import variables
  */
-
+@import "src/assets/css/scss/abstract/variables";
 /*
 ** import bootstrap css
  */
