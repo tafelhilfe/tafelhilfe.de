@@ -1,13 +1,6 @@
 <template>
     <div class="chris_testseite">
         <top-navigation />
-        <transition
-                name="bounce"
-                enter-active-class="bounceInLeft"
-                leave-active-class="bounceOutRight"
-        >
-            <p v-if="show">hello</p>
-        </transition>
         <section>
             <textImage :tic="tic"/>
             <textImage :tic="tic2"/>
