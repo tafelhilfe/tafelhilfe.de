@@ -16,14 +16,14 @@ module.exports = {
                     'b-card-img-lazy': ['src', 'blank-src'],
                     'b-carousel-slide': 'img-src',
                     'b-embed': 'src'
-                }
+                };
                 return options
-            })
+            });
         config.module
             .rule('compileSass')
             .test(/\.scss$/)
             .use('sass-compiler')
-            .loader('sass-loader')
+            .loader('sass-loader');
         const svgRule = config.module.rule('svg');
         svgRule.uses.clear();
         svgRule
@@ -34,4 +34,4 @@ module.exports = {
             .loader('vue-svg-loader');
     },
     runtimeCompiler: true
-}
+};
