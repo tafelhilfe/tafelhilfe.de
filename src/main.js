@@ -3,6 +3,9 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from "./App.vue";
 import axios from "axios";
 import router from "./router";
+import {BadgerAccordion, BadgerAccordionItem} from 'vue-badger-accordion'
+import SvgTransition from 'vue-svg-transition';
+
 
 import "@/assets/css/scss/custom.scss";
 
@@ -12,6 +15,10 @@ Vue.prototype.$http = axios;
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+Vue.use(SvgTransition);
+
+Vue.component('BadgerAccordion', BadgerAccordion)
+Vue.component('BadgerAccordionItem', BadgerAccordionItem)
 
 Vue.filter("capitalize", function(value) {
   if (!value) return "";
