@@ -1,9 +1,11 @@
 <template>
     <div class="chris_testseite">
-        <top-navigation />
+        <top-navigation/>
         <section>
+            <faqs :faqs="faqs"></faqs>
             <textImage :tic="tic"/>
             <textImage :tic="tic2"/>
+            <faqs-volunteers />
         </section>
         <footer-default/>
     </div>
@@ -12,15 +14,37 @@
     import textImage from "../components/textImage";
     import TopNavigation from "./top-navigation";
     import FooterDefault from "./footer";
+    import Faqs from "../components/faqs";
+    import FaqsVolunteers from "./faqs_volunteers";
 
     export default {
         components: {
+            FaqsVolunteers,
+            Faqs,
             FooterDefault,
             TopNavigation,
             textImage
         },
         data() {
             return {
+                faqs: {
+                    headline: "lorem Ipsum",
+                    faq: [
+                        {
+                            opened: false,
+                            id: "0",
+                            header: "Test",
+                            content: "Lorem Ipsum"
+                        },
+                        {
+                            opened: false,
+                            id: "1",
+                            header: "Test 1",
+                            content: "Lorem Ipsum 1"
+                        }
+                    ]
+
+                },
                 tic: {
                     headline: "Lorem Ipsum",
                     image: {

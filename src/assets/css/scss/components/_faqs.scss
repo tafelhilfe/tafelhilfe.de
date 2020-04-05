@@ -1,0 +1,42 @@
+.faqs {
+  margin-bottom: 30px;
+  h1 {
+    border-bottom: $primary 3px solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .faqs-tablist {
+    width: 90%;
+    margin: 0 auto 15px;
+    .card {
+      border: none;
+      border-bottom: 1px solid $gray-600;
+      border-radius: 0;
+      margin-bottom: 15px;
+      header {
+        cursor: pointer;
+        border: none;
+        padding-left: 0;
+        .faqs-card-headline {
+          margin-bottom: 0;
+        }
+      }
+      .card-body {
+        padding-top: 0;
+        padding-left: 0;
+        color: $gray-600;
+        ol {
+          padding-left: 25px;
+          list-style: decimal;
+        }
+      }
+    }
+
+  }
+  .faq-icon {
+    position: absolute;
+    right: 30px;
+    top: 14px;
+    font-size: 24px;
+  }
+}
