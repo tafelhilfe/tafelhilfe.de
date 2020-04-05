@@ -7,7 +7,6 @@ import {BadgerAccordion, BadgerAccordionItem} from 'vue-badger-accordion'
 import SvgTransition from 'vue-svg-transition';
 
 
-import "@/assets/css/tailwind.css";
 import "@/assets/css/scss/custom.scss";
 
 Vue.config.productionTip = false;
