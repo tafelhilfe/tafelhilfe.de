@@ -8,8 +8,12 @@
         </div>
         <div class="col-6 col-sm">
           <h6 class="text-capitalize border-bottom border-dark">{{footer.col2.headline}}</h6>
-          <p v-html="footer.col2.text"></p>
-          <b-link :href="`mailto:${footer.col2.href}`">{{footer.col2.href}}</b-link>
+          <ul class="list-unstyled">
+            <li v-for="item in footer.col2.links" :key="item.href">
+              <div v-html="item.text"></div>
+              <b-link :href="`mailto:${item.href}`">{{item.href}}</b-link>
+            </li>
+          </ul>
         </div>
         <div class="col-6 col-sm">
           <h6 class="text-capitalize border-bottom border-dark">{{footer.col3.headline}}</h6>
@@ -49,8 +53,16 @@
           },
           col2: {
             headline: 'Kontakt',
-            text: 'Tafelhilfe e.V.i.G.<br/>Presseanfragen',
-            href: 'kontakt@tafelhilfe.de'
+            links: [
+              {
+                text: 'Tafelhilfe e.V.i.G.',
+                href: 'kontakt@tafelhilfe.de'
+              },
+              {
+                text: 'Presseanfragen',
+                href: 'presse@tafelhilfe.de'
+              },
+            ],
           },
           col3: {
             headline: 'Links',
