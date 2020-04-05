@@ -1,22 +1,16 @@
 <template>
     <div class="chris_testseite">
-        <top-navigation />
         <section>
             <textImage :tic="tic"/>
             <textImage :tic="tic2"/>
         </section>
-        <footer-default/>
     </div>
 </template>
 <script>
     import textImage from "../components/textImage";
-    import TopNavigation from "./top-navigation";
-    import FooterDefault from "./footer";
 
     export default {
         components: {
-            FooterDefault,
-            TopNavigation,
             textImage
         },
         data() {

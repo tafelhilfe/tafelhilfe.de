@@ -1,0 +1,27 @@
+@media (min-width: 768px) {
+  .overlap {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .overlap-1 {
+    display: block;
+    margin-top: 20%;
+    z-index: 110;
+    max-width: 30%;
+  }
+
+  .overlap-2 {
+    display: block;
+    margin-left: 20%;
+    z-index: 120;
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .overlap-1 {
+    margin-top: 10%;
+  }
+}

@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <div class="relative bg-gray-50 overflow-hidden">
-      <headerBg />
       <div class="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
-        <topNav />
         <div
           class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28"
         >
@@ -210,23 +208,16 @@
         ></div>
       </div>
     </div>
-    <footerNav />
   </div>
 </template>
 
 <script>
 import tafeln from "@/assets/tafeln.json";
 import resources from "@/assets/resources.json";
-import headerBg from "../views/header-background";
-import topNav from "../views/top-navigation";
-import footerNav from "../views/footer";
 
 export default {
   name: "tafel-form",
   components: {
-    headerBg,
-    topNav,
-    footerNav
   },
   data() {
     return {

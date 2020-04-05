@@ -1,5 +1,14 @@
 <template>
   <div id="app">
-    <router-view />
+    <transition :name="$route.meta.transitionName" :mode="$route.meta.transitionMode">
+      <router-view />
+    </transition>
   </div>
 </template>
+
+<script>
+
+  export default {
+    name: "app",
+  }
+</script>

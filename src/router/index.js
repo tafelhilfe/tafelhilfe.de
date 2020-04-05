@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/home";
 
 Vue.use(VueRouter);
 
@@ -8,38 +8,42 @@ const routes = [
   {
     path: "/",
     name: "Home",
+    meta: {
+      transitionName: 'fadeDownBig',
+      transitionMode: 'out-in'
+    },
     component: Home
   },
   {
-    path: "/anfrage",
-    name: "Anfrage",
+    path: "/tafeln",
+    name: "Tafeln",
+    meta: {
+      transitionName: 'fadeRight'
+    },
     component: () =>
-      import(/* webpackChunkName: "about" */ "../components/tafel-form.vue")
+        import("../views/tafeln")
   },
   {
-    path: "/resourcen",
-    name: "Resourcen",
+    path: "/helfer",
+    name: "Helfer",
+    meta: {
+      transitionName: 'fadeLeft'
+    },
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/resourcen.vue")
+        import("../views/helfer")
   },
   {
     path: "/impressum",
     name: "Impressum",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/impressum.vue")
+      import("../views/impressum")
   },
   {
     path: "/datapolicy",
     name: "Datenschutzerklärung",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/datapolicy.vue")
+      import("../views/datapolicy")
   },
-  {
-    path: "/chris_testseite",
-    name: "Chris Testseite",
-    component: () =>
-        import("../views/chris_testseite")
-  }
 ];
 
 const router = new VueRouter({
