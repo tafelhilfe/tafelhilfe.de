@@ -1,20 +1,20 @@
 <template>
   <div>
-    <Header/>
+    <myheader/>
     <Home :home="home"/>
-    <Footer/>
+    <myfooter/>
   </div>
 </template>
 
 <script>
-  import Header from "../views/header";
-  import Footer from "../views/footer";
+  import myheader from "../views/header";
+  import myfooter from "../views/footer";
   import Home from "../components/home";
 
 export default {
   components: {
-    Header,
-    Footer,
+    myheader,
+    myfooter,
     Home
   },
   data() {

@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: "header",
+        name: "myheader",
         props: {
             'variant': {
                 default:  'light'
