@@ -25,9 +25,9 @@
                             header: "Welche Aufgaben erwarten mich?",
                             content: "Die Tafel ist quasi wie ein Supermarkt für Menschen, die bedürftig sind.<br />" +
                                 "Es gibt 3 Aufgabenbereiche:<br/>" +
-                                "<ol>" +
-                                "<li>Als Fahrer*in/ bzw. Begleitperson holst du die Lebensmittel von den Supermärkten und Bäckereien, die mit der örtlichen Tafel kooperieren, mit dem Auto der Tafel ab und lieferst sie ans Tafelgebäude. Dort lädst du zusammen mit anderen Helfer*innen der Vorgruppe die Lebensmittelkisten aus.</li>" +
-                                "<li>Als Helfer*in der Vorgruppe nimmst du die Lebensmittelkisten der Fahrer*innen entgegen, sortierst diese nach Kategorien (z.B. Kühlware, Obst und Gemüse, Brot, Backwaren und Süßigkeiten), entsorgst schlechte Ware und räumst die guten Lebensmittel in die dafür vorgesehenen Regale ein, oder packst sie in Rationen für die spätere Abholung.</li>" +
+                                "<ol class='mb-0'>" +
+                                "<li class='mb-2'>Als Fahrer*in/ bzw. Begleitperson holst du die Lebensmittel von den Supermärkten und Bäckereien, die mit der örtlichen Tafel kooperieren, mit dem Auto der Tafel ab und lieferst sie ans Tafelgebäude. Dort lädst du zusammen mit anderen Helfer*innen der Vorgruppe die Lebensmittelkisten aus.</li>" +
+                                "<li class='mb-2'>Als Helfer*in der Vorgruppe nimmst du die Lebensmittelkisten der Fahrer*innen entgegen, sortierst diese nach Kategorien (z.B. Kühlware, Obst und Gemüse, Brot, Backwaren und Süßigkeiten), entsorgst schlechte Ware und räumst die guten Lebensmittel in die dafür vorgesehenen Regale ein, oder packst sie in Rationen für die spätere Abholung.</li>" +
                                 "<li>Als Helfer*in der Ausgabe verteilst du die Ware an die Bedürftigen, die zur Tafel kommen. Dabei bekommen Personen, die einen Schein für eine 6-köpfige Familie haben mehr Ware als eine einzelne Person. Bei manchen Tafeln nehmen sich die Kund*innen auch selbst die Ware aus den Regalen.<br/>" +
                                 "Aufgrund des Coronaviruses liefern immer mehr Tafeln die Lebensmittel an ihre Kund*innen, sodass dann statt der Ausgabe die Verteilung der vorgepackten Tüten deine Aufgabe wäre.</li>" +
                                 "</ol>"
