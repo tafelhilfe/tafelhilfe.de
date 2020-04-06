@@ -9,7 +9,7 @@
             </b-col>
             <b-col lg v-if="tic.text">
                 <h3 class="text-center" v-if="tic.text.headline !== ''" v-html="tic.text.headline"/>
-                <p v-if="tic.text.paragraph !== ''">{{ tic.text.paragraph }}</p>
+                <p v-if="tic.text.paragraph !== ''" v-html="tic.text.paragraph" />
                 <b-button v-if="tic.text.button && tic.text.button.href !== '' && tic.text.button.label !== ''"
                           :href="tic.text.button.href">{{ tic.text.button.label }}
                 </b-button>
