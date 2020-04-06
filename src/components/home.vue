@@ -1,6 +1,6 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
+    <b-container fluid>
+        <b-row>
             <div class="col-12 col-sm col-md-12 col-lg d-flex align-items-center justify-content-center text-center text-white vp bg-tafeln">
                 <div class="flex-row">
                     <h1>{{home.tafeln.headline}}</h1>
@@ -15,8 +15,8 @@
                     <b-button  :to="home.helfer.href" pill variant="dark" size="lg" class="shadow-lg"><b-icon icon="chevron-left" font-scale=".99"></b-icon> {{home.helfer.button}}</b-button>
                 </div>
             </div>
-        </div>
-    </div>
+        </b-row>
+    </b-container>
 </template>
 
 <script>

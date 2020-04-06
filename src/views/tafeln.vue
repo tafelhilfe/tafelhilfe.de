@@ -32,11 +32,16 @@
                     },
                     progress: {
                         label: 'Schritt',
-                        step: 1,
-                        max: 5
+                        step: 0,
+                        max: 6
                     },
                     startButton: 'Los geht\'s',
                     backButton: 'Vorheriger Schritt',
+                    formSteps: {
+                        step1: {
+                            question: 'Wie ist Ihr Status?'
+                        }
+                    }
                 }
             }
         }
