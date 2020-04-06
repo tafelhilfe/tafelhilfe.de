@@ -2,6 +2,7 @@
     <div>
         <Header variant="primary"/>
         <Helfer :helfer="helfer"/>
+        <faqs-volunteers />
         <Footer/>
     </div>
 </template>
@@ -10,10 +11,12 @@
     import Header from "../views/header";
     import Footer from "../views/footer";
     import Helfer from '../components/helfer';
+    import FaqsVolunteers from "./faqs_volunteers";
 
     export default {
         name: "helfer",
         components: {
+            FaqsVolunteers,
             Header,
             Footer,
             Helfer,
