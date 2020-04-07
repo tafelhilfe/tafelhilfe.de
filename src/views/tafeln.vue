@@ -36,12 +36,98 @@
                         max: 6
                     },
                     startButton: 'Los geht\'s',
-                    backButton: 'Vorheriger Schritt',
-                    formSteps: {
-                        step1: {
-                            question: 'Wie ist Ihr Status?'
-                        }
-                    }
+                    backButton: 'Zurück',
+                    icons: [
+                        'circle',
+                        'check-circle',
+                        'app',
+                        'check-box',
+                    ],
+                    q1: {
+                        selected: null,
+                        question: 'Wie ist Ihr Status?',
+                        options: [
+                            {
+                                text: 'Wir haben geöffnet',
+                                value: 'open',
+                                active: '',
+                            },
+                            {
+                                text: 'Wir haben leider geschlossen',
+                                value: 'closed',
+                                active: '',
+                            },
+                        ]
+                    },
+                    q2a: {
+                        // Open
+                        selected: null,
+                        question: 'Brauchen Sie derzeit Helfer?',
+                        options: [
+                            {
+                                text: 'Ja',
+                                value: 'required',
+                                active: '',
+                            },
+                            {
+                                text: 'Nein',
+                                value: 'needless',
+                                active: '',
+                            },
+                        ]
+                    },
+                    q2b: {
+                        // closed
+                        selected: null,
+                        question: 'Wollen Sie in naher Zukunft wieder öffnen?',
+                        options: [
+                            {
+                                text: 'Ja',
+                                value: 'openAgain',
+                                active: '',
+                            },
+                            {
+                                text: 'Nein',
+                                value: 'closedUntilFurther',
+                                active: '',
+                            },
+                        ]
+                    },
+                    q3a: {
+                        // needless / closedUntilFurther
+                        question: 'Geben Sie bitte Ihre Postleitzahl ein',
+                    },
+                    q3b: {
+                        // required / openAgain
+                        question: 'Wobei benötigen Sie Hilfe?',
+                        options: [
+                            {
+                                text: 'Lebensmittelabholung',
+                                value: 'Abholung',
+                                active: '',
+                                icon: 'app',
+                            },
+                            {
+                                text: 'Lebensmittel sortieren, säubern, verpacken',
+                                value: 'sortieren',
+                                active: '',
+                                icon: 'app',
+                            },
+                            {
+                                text: 'Lebensmittel liefern',
+                                value: 'liefern',
+                                active: '',
+                                icon: 'app',
+                            },
+                            {
+                                text: 'Sonstiges',
+                                placeholder: 'Geben Sie hier Ihren zusätzlichen Bedarf an',
+                                value: '',
+                                active: '',
+                                icon: 'app',
+                            },
+                        ]
+                    },
                 }
             }
         }

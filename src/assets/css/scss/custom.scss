@@ -25,11 +25,12 @@
 /*
 ** components
  */
+@import "src/assets/css/scss/components/footer";
 @import "src/assets/css/scss/components/textImage";
 @import "src/assets/css/scss/components/faqs";
 @import "src/assets/css/scss/components/home";
 @import "src/assets/css/scss/components/helfer";
-
+@import "src/assets/css/scss/components/tafeln";
 
 /*
  ** Border width
@@ -53,6 +54,14 @@
 
 .border-5, .bt-5, .br-5, .bb-5, .bl-5 {
   border-width: ($spacer * .75) !important;
+}
+
+/*
+ ** Cursor
+ */
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /*

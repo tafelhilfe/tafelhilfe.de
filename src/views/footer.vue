@@ -34,7 +34,7 @@
           </ul>
         </div>
         <div class="col-6 col-sm">
-          #wir für die Tafeln
+          <Slogan class="tk-flood-std float-right"/>
         </div>
       </b-row>
     </b-container>
@@ -42,8 +42,13 @@
 </template>
 
 <script>
+  import Slogan from "../assets/images/slogan.svg"
+
   export default {
     name: "myfooter",
+    components: {
+      Slogan
+    },
     data() {
       return {
         footer: {
@@ -107,7 +112,7 @@
             ]
           },
           col5: {
-            headline: ''
+            src: ''
           }
         }
       }
