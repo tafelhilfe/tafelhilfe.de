@@ -14,6 +14,7 @@ library.add(
 
 import "@/assets/css/scss/custom.scss";
 
+
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
 // Install BootstrapVue
