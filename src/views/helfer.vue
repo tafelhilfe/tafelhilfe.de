@@ -1,7 +1,8 @@
 <template>
     <div>
         <Header variant="primary"/>
-        <Helfer :helfer="helfer"/>
+        <Helfer  :helfer="helfer"/>
+        <stage-voluneers />
         <faqs-volunteers />
         <Footer/>
     </div>
@@ -12,10 +13,12 @@
     import Footer from "../views/footer";
     import Helfer from '../components/helfer';
     import FaqsVolunteers from "./faqs_volunteers";
+    import StageVoluneers from "./stage_volunteers";
 
     export default {
         name: "helfer",
         components: {
+            StageVoluneers,
             FaqsVolunteers,
             Header,
             Footer,
@@ -23,6 +26,7 @@
         },
         data() {
             return {
+                show: "0",
                 helfer: {
                     topContent: {
                         catchPhrases: {

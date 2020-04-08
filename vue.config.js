@@ -8,6 +8,7 @@ module.exports = {
                 options.transformAssetUrls = {
                     img: 'src',
                     image: 'xlink:href',
+                    svg: 'src',
                     'b-avatar': 'src',
                     'b-img': 'src',
                     'b-img-lazy': ['src', 'blank-src'],

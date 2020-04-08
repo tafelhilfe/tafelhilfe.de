@@ -1,6 +1,6 @@
 <template>
     <div class="faqsVolunteers">
-        <faqs :faqs="faqs" />
+        <faqs :faqs="faqs"/>
     </div>
 </template>
 <script>
@@ -12,6 +12,7 @@
             return {
                 faqs: {
                     headline: "Häufig gestellte Fragen",
+                    themeColor: 'secondary',
                     faq: [
                         {
                             opened: false,

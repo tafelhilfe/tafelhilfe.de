@@ -1,5 +1,6 @@
 <template>
     <div class="container content">
+        <!--
         <div class="row mb-5">
             <div class="col">
                 <div class="pt-5 pr-5 pb-4 pl-5 overlap overlap-2 bg-dark text-white">
@@ -22,7 +23,7 @@
             <div class="col3 bg-white">
                 col3
             </div>
-        </div>
+        </div>-->
     </div>
 </template>
 
