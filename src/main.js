@@ -3,10 +3,17 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from "./App.vue";
 import axios from "axios";
 import router from "./router";
-import FontAwesomeIcon from "vue-fontawesome"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+library.add(
+    faInstagram,
+    faYoutube,
+)
 
 import "@/assets/css/scss/custom.scss";
+
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
@@ -16,8 +23,6 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-
-
 
 Vue.filter("capitalize", function(value) {
   if (!value) return "";

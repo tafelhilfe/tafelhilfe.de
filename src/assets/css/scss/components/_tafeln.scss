@@ -1,0 +1,10 @@
+.custom-radio,
+.custom-checkbox {
+  & .custom-control-label {
+    cursor: pointer;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
