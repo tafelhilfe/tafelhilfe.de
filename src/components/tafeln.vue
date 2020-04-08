@@ -57,7 +57,8 @@
                         <b-form-checkbox class="btn btn-outline-primary btn-lg mb-4 rounded text-left" :class="tafeln.q3b.options[1].active" v-model="data.selectedCheckbox" :value="tafeln.q3b.options[1].value"><b-icon :icon="tafeln.q3b.options[1].icon"></b-icon> {{tafeln.q3b.options[1].text}}</b-form-checkbox>
                         <b-form-checkbox class="btn btn-outline-primary btn-lg mb-4 rounded text-left" :class="tafeln.q3b.options[2].active" v-model="data.selectedCheckbox" :value="tafeln.q3b.options[2].value"><b-icon :icon="tafeln.q3b.options[2].icon"></b-icon> {{tafeln.q3b.options[2].text}}</b-form-checkbox>
                         <b-form-checkbox class="btn btn-outline-primary btn-lg mb-4 rounded text-left" :class="tafeln.q3b.options[3].active" v-model="data.selectedCheckbox" :value="tafeln.q3b.options[3].value"><b-icon :icon="tafeln.q3b.options[3].icon"></b-icon> {{tafeln.q3b.options[3].text}}</b-form-checkbox>
-                        <b-form-textarea class="border-primary mb-4 rounded" rows="4" max-rows="6" :placeholder="tafeln.q3b.options[3].placeholder" v-if="textarea" v-model="data.sonstiges"></b-form-textarea>
+                        <b-form-checkbox class="btn btn-outline-primary btn-lg mb-4 rounded text-left" :class="tafeln.q3b.options[4].active" v-model="data.selectedCheckbox" :value="tafeln.q3b.options[4].value"><b-icon :icon="tafeln.q3b.options[4].icon"></b-icon> {{tafeln.q3b.options[4].text}}</b-form-checkbox>
+                        <b-form-textarea class="border-primary mb-4 rounded" rows="4" max-rows="6" :placeholder="tafeln.q3b.options[4].placeholder" v-if="textarea" v-model="data.sonstiges"></b-form-textarea>
                     </div>
                 </b-col>
             </b-row>
@@ -99,15 +100,15 @@
         },
         computed: {
             disableButton: function() {
-                if (this.tafeln.progress.step == 1 && this.tafeln.q1.selected === null) {
+                if (this.tafeln.progress.step === 1 && this.tafeln.q1.selected === null) {
                     return true
-                } else if (this.tafeln.progress.step == 2 && this.tafeln.q2a.selected === null && this.data.store === 'open') {
+                } else if (this.tafeln.progress.step === 2 && this.tafeln.q2a.selected === null && this.data.store === 'open') {
                     return true
-                } else if (this.tafeln.progress.step == 2 && this.tafeln.q2b.selected === null && this.data.store === 'closed') {
+                } else if (this.tafeln.progress.step === 2 && this.tafeln.q2b.selected === null && this.data.store === 'closed') {
                     return true
-                } else if (this.tafeln.progress.step == 3 && this.data.selectedCheckbox.length === 0) {
+                } else if (this.tafeln.progress.step === 3 && this.data.selectedCheckbox.length === 0) {
                     return true
-                } else if(this.tafeln.progress.step == 4 || (this.tafeln.progress.step == 3 && (this.data.help === 'needless' || this.data.prospektive === 'closedUntilFurther'))) {
+                } else if(this.tafeln.progress.step === 4 || (this.tafeln.progress.step === 3 && (this.data.help === 'needless' || this.data.prospektive === 'closedUntilFurther'))) {
                     return !(this.data.plz.length === 5)
                 } else {
                     return false
@@ -166,13 +167,13 @@
                 if(this.tafeln[obj].options[index].active === '') {
                     this.tafeln[obj].options[index].active = 'active';
                     this.tafeln[obj].options[index].icon = this.tafeln.icons[3];
-                    if(index == 3) {
+                    if(index === 4) {
                         this.textarea = true
                     }
                 } else {
                     this.tafeln[obj].options[index].active = '';
                     this.tafeln[obj].options[index].icon = this.tafeln.icons[2];
-                    if(index == 3) {
+                    if(index === 4) {
                         this.textarea = false
                     }
                 }
