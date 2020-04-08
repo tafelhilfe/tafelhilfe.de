@@ -120,6 +120,12 @@
                                 icon: 'app',
                             },
                             {
+                                text: 'Lebensmittelausgabe',
+                                value: 'Ausgabe',
+                                active: '',
+                                icon: 'app',
+                            },
+                            {
                                 text: 'Sonstiges',
                                 placeholder: 'Geben Sie hier Ihren zusätzlichen Bedarf an',
                                 value: '',
