@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="168.828" height="136" viewBox="0 0 168.828 136"><defs><style>.a{fill:#354463;font-size:44px;font-family:FloodStd, Flood Std;}</style></defs><g transform="translate(-0.72)"><text class="a" transform="translate(49.548 29)"><tspan x="0" y="0">#WIR</tspan></text><text class="a" transform="translate(1.72 75)"><tspan x="0" y="0">FÜR DIE</tspan></text><text class="a" transform="translate(4.096 121)"><tspan x="0" y="0">TAFELN</tspan></text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="168.828" height="136" viewBox="0 0 168.828 136">
+  <g transform="translate(-0.72)">
+    <text transform="translate(49.548 29)">
+      <tspan x="0" y="0">#WIR</tspan>
+    </text>
+    <text transform="translate(1.72 75)">
+      <tspan x="0" y="0">FÜR DIE</tspan>
+    </text>
+    <text transform="translate(4.096 121)">
+      <tspan x="0" y="0">TAFELN</tspan>
+    </text>
+  </g>
+</svg>

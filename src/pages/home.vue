@@ -1,20 +1,14 @@
 <template>
   <div>
-    <myheader/>
     <Home :home="home"/>
-    <myfooter/>
   </div>
 </template>
 
 <script>
-  import myheader from "../views/header";
-  import myfooter from "../views/footer";
   import Home from "../components/home";
 
 export default {
   components: {
-    myheader,
-    myfooter,
     Home
   },
   data() {

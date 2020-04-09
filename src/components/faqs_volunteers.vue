@@ -1,10 +1,10 @@
 <template>
     <div class="faqsVolunteers">
-        <faqs :faqs="faqs"/>
+        <faqs :faqs="faqs" />
     </div>
 </template>
 <script>
-    import Faqs from "../components/faqs";
+    import Faqs from "./faqs";
     export default {
         name: "faqsVolunteers",
         components: {Faqs},
@@ -12,7 +12,7 @@
             return {
                 faqs: {
                     headline: "Häufig gestellte Fragen",
-                    themeColor: 'secondary',
+                    borderColor: 'secondary',
                     faq: [
                         {
                             opened: false,
