@@ -2,6 +2,7 @@
     <div>
         <Header variant="primary"/>
         <Helfer :helfer="helfer"/>
+        <TafelnMapComponent />
         <faqs-volunteers />
         <Footer/>
     </div>
@@ -12,10 +13,12 @@
     import Footer from "../views/footer";
     import Helfer from '../components/helfer';
     import FaqsVolunteers from "./faqs_volunteers";
+    import TafelnMapComponent from "../components/tafelnMapComponent"
 
     export default {
         name: "helfer",
         components: {
+            TafelnMapComponent,
             FaqsVolunteers,
             Header,
             Footer,
