@@ -6,6 +6,7 @@ import router from "./router";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueMq from 'vue-mq'
 
 library.add(
     faInstagram,
@@ -21,6 +22,15 @@ Vue.prototype.$http = axios;
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+// Vue MQ for easy conditional breakpoint rendering
+Vue.use(VueMq, {
+  breakpoints: {
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: Infinity
+  }
+})
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

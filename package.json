@@ -21,9 +21,13 @@
     "autoprefixer": "^9.7.4",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "map-promisified": "^0.4.0",
+    "mapbox-gl": "^1.9.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
-    "vue-svg-loader": "^0.16.0"
+    "vue-svg-loader": "^0.16.0",
+    "vue-mapbox": "^0.4.1",
+    "vue-mq": "^1.0.1",
   },
   "devDependencies": {
     "@popperjs/core": "^2.1.1",

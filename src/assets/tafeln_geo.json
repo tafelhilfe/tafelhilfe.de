@@ -4968,7 +4968,11 @@
     "ansprechpartner": "Herr Roland Goetz",
     "tel": "0251 67 43 122",
     "mail": "kontakt@muenster-tafel.de",
-    "url": "www.muenster-tafel.de"
+    "url": "www.muenster-tafel.de",
+    "coords":  {
+      "lat": 51.909521,
+      "lng":  7.704099
+    }
   },
   {
     "name": "Nauener Tafel e.V.",
@@ -5985,11 +5989,6 @@
     }
   },
   {
-    "name": "Richtenberger Tafel (kein Mitglied)",
-    "ansprechpartner": "Susanne Taraschinski",
-    "tel": "01 71 - 11 38 741"
-  },
-  {
     "name": "Riesaer Tafel",
     "addresse": "Klötzer Straße 35",
     "plz": "01589",
@@ -6226,11 +6225,16 @@
   {
     "name": "Sangerhäuser Tafel",
     "addresse": "Bahnhofstraße 33 a",
-    "plz": "6526 Sangerhausen",
+    "plz": "06526",
+    "ort": "Sangerhausen",
     "ansprechpartner": "Birgit Lotze",
     "tel": "03464 - 260707, 03464 - 515197",
     "fax": "03464 - 518803",
-    "mail": "geschaeftsfuehrung@abi-sangerhausen.de"
+    "mail": "geschaeftsfuehrung@abi-sangerhausen.de",
+    "coords": {
+      "lat": 51.479558,
+      "lng": 11.293616
+    }
   },
   {
     "name": "Sankt Augustiner Tafel",
@@ -6982,12 +6986,17 @@
   {
     "name": "Tafel Ahrweiler",
     "addresse": "Bahnhofstr. 5",
-    "plz": "5347 Bad Neuenahr-Ahrweiler",
+    "plz": "53477",
+    "ort": "Bad Neuenahr-Ahrweiler",
     "ansprechpartner": "Christiane Böttcher",
     "tel": "02641 - 759860",
     "fax": "02641 - 759874",
     "mail": "info@caritas-ahrweiler.de",
-    "url": "www.caritas-ahrweiler.de"
+    "url": "www.caritas-ahrweiler.de",
+    "coords":  {
+      "lat": 50.545953,
+      "lng": 7.106999
+    }
   },
   {
     "name": "Tafel Altenburg",
@@ -13433,7 +13442,11 @@
     "ansprechpartner": "Jutta Marxcors",
     "tel": "02267 - 8880444",
     "fax": "02267 - 8880446",
-    "mail": "info@wipperfuerther-tafel.de"
+    "mail": "info@wipperfuerther-tafel.de",
+    "coords":  {
+      "lat": 51.120614,
+      "lng": 7.398037
+    }
   },
   {
     "name": "Wismarer Tafel e.V.",
