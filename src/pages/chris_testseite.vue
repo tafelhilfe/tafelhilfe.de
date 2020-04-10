@@ -1,28 +1,22 @@
 <template>
     <div class="chris_testseite">
-        <top-navigation/>
         <section>
             <faqs :faqs="faqs"></faqs>
             <textImage :tic="tic"/>
             <textImage :tic="tic2"/>
             <faqs-volunteers />
         </section>
-        <footer-default/>
     </div>
 </template>
 <script>
     import textImage from "../components/textImage";
-    import TopNavigation from "./top-navigation";
-    import FooterDefault from "./footer";
     import Faqs from "../components/faqs";
-    import FaqsVolunteers from "./faqs_volunteers";
+    import FaqsVolunteers from "../components/faqs_volunteers";
 
     export default {
         components: {
             FaqsVolunteers,
             Faqs,
-            FooterDefault,
-            TopNavigation,
             textImage
         },
         data() {

@@ -28,7 +28,7 @@
           <h6 class="text-capitalize border-bottom border-dark">{{footer.col4.headline}}</h6>
           <ul class="list-unstyled">
             <li v-for="item in footer.col4.links" :key="item.href" class=" float-left mr-3">
-              <b-link :href="item.href" :target="item.target" v-if="item.target !== ''"><font-awesome-icon :icon="item.icon" size="2x" :class="item.color"/></b-link>
+              <b-link :href="item.href" :target="item.target" v-if="item.target !== ''"><fa :icon="item.icon" size="2x" :class="item.color"/></b-link>
               <router-link :to="item.href" v-else>{{item.text}}</router-link>
             </li>
           </ul>

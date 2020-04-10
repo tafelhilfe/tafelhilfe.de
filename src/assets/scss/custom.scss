@@ -5,7 +5,7 @@
 /*
 ** import variables
  */
-@import "src/assets/css/scss/abstract/variables";
+@import "src/assets/scss/abstract/variables";
 /*
 ** import bootstrap css
  */
@@ -15,22 +15,23 @@
  */
 @import "node_modules/bootstrap-vue/src/index";
 /*
-** import animated css for vue 2
+** import vue animated css
  */
+$animationDuration: 0.6s;
 @import "node_modules/vue2-animate/src/sass/vue2-animate";
-
 /*
  ** import other sass files
  */
 /*
 ** components
  */
-@import "src/assets/css/scss/components/footer";
-@import "src/assets/css/scss/components/textImage";
-@import "src/assets/css/scss/components/faqs";
-@import "src/assets/css/scss/components/home";
-@import "src/assets/css/scss/components/helfer";
-@import "src/assets/css/scss/components/tafeln";
+@import "src/assets/scss/components/footer";
+@import "src/assets/scss/components/textImage";
+@import "src/assets/scss/components/faqs";
+@import "src/assets/scss/components/home";
+@import "src/assets/scss/components/helfer";
+@import "src/assets/scss/components/tafeln";
+@import "src/assets/scss/components/stage";
 
 /*
  ** Heading Font Weight

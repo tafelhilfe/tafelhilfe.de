@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-    import Faqs from "../components/faqs";
+    import Faqs from "./faqs";
     export default {
         name: "faqsVolunteers",
         components: {Faqs},
@@ -12,6 +12,7 @@
             return {
                 faqs: {
                     headline: "Häufig gestellte Fragen",
+                    borderColor: 'secondary',
                     faq: [
                         {
                             opened: false,
