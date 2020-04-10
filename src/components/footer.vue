@@ -99,13 +99,13 @@
             links: [
               {
                 icon: ['fab', 'instagram'],
-                color: 'text-pink',
+                color: 'text-dark',
                 href: 'https://www.instagram.com/tafelhilfe',
                 target: '_blank'
               },
               {
                 icon: ['fab', 'youtube'],
-                color: 'text-red',
+                color: 'text-dark',
                 href: 'https://www.youtube.com/channel/UCpl1ayPGtdPIWZyNDTQCv0w/featured',
                 target: '_blank'
               }

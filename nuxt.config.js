@@ -28,7 +28,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    // { src: '~/plugins/mapbox', mode: 'client' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -40,20 +42,17 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
 
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
 
     'svg-to-vue-component/nuxt',
 
     'nuxt-fontawesome',
 
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
   ],
   bootstrapVue: {
-    // Add the icon plugin to the `componentsPlugins` array
     icons: true,
     css: false,
     bvCSS: false

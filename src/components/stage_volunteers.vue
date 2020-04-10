@@ -1,8 +1,9 @@
 <template>
-    <hero-stage :catch-phrases="cp"/>
+    <hero-stage :catch-phrases="cp"
+    :stage="stage"/>
 </template>
 <script>
-    import HeroStage from "../components/stage";
+    import HeroStage from "./stage";
     export default {
         name: 'stageVoluneers',
         components: {HeroStage},
@@ -17,7 +18,17 @@
                             text: "Blindtext Wiederholung Blindtext Wiederholung Blindtext Wiederholung Blindtext Wiederholung "
                         }
                     ]
-                }
+                },
+              stage: {
+                  image: {
+                    one: {
+                      src: 'http://placeimg.com/510/260/people'
+                    },
+                    two: {
+                      src: 'https://placeimg.com/510/260/nature'
+                    }
+                  }
+              }
             }
         }
     }

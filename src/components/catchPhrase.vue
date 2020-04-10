@@ -16,9 +16,6 @@
         props: ['catchPhrases'],
         methods: {
             initCatchPhrases(showCP, item) {
-                console.log('here');
-                console.log(item);
-                console.log(item.length);
                 if (item.length > 1) {
                     console.log('im if');
                     let i = showCP;

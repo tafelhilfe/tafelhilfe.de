@@ -14,7 +14,9 @@
 ** import bootstrap vue css
  */
 @import "node_modules/bootstrap-vue/src/index";
-
+/*
+** import vue animated css
+ */
 $animationDuration: 0.6s;
 @import "node_modules/vue2-animate/src/sass/vue2-animate";
 /*

@@ -1,10 +1,69 @@
 .stage {
-  .catchPhrase {
-    hr {
-      margin-right: 20%;
+  .catchPhraseContainer {
+    .catchPhrase {
+      hr {
+        margin-right: 20%;
+      }
     }
   }
   .stage-image-container {
     background: url("~assets/images/background-hero.svg");
+    background-size: 100% 100%;
+    .stageImageOne {
+      position: absolute;
+      max-height: 11rem;
+      z-index: 5;
+    }
+
+    .stageImageTwo {
+      position: absolute;
+      max-height: 11rem;
+      z-index: 10;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .stage {
+    .catchPhraseContainer {
+      margin-top: 7rem;
+    }
+    .stage-image-container {
+      min-height: 30rem;
+
+      .stageImageOne {
+        top: 7rem;
+        left: 1rem;
+      }
+
+      .stageImageTwo {
+        top: 15rem;
+        left: 11rem;
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .stage {
+    .catchPhraseContainer {
+      .catchPhrase {
+        hr {
+          margin-right: 20%;
+        }
+      }
+    }
+
+    .stage-image-container {
+      min-height: 30rem;
+
+      .stageImageOne {
+        top: 7rem;
+        left: 1rem;
+      }
+
+      .stageImageTwo {
+        top: 15rem;
+        left: 11rem;
+      }
+    }
   }
 }
