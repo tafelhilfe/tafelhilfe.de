@@ -21,3 +21,14 @@
     }
   }
 }
+
+.navbar-light {
+  & button:focus {
+    outline: 0;
+  }
+  & .navbar-nav {
+    & .nav-link {
+      color: inherit;
+    }
+  }
+}
