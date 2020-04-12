@@ -3,7 +3,7 @@
       <div class="container">
         <b-navbar toggleable="sm" class="p-0">
           <b-navbar-brand to="/">
-            <span class="text-primary barcelony small">Tafel</span>
+            <span class="text-primary barcelony small">tafel</span>
             <Logo class="logo small"/>
             <span class="text-primary barcelony small">hilfe</span>
           </b-navbar-brand>
