@@ -1,22 +1,22 @@
 <template>
   <div class="container content">
     <stage-voluneers/>
-    <!--<mapbox-map/>-->
+    <TafelnMapComponent />
     <faqs-volunteers/>
   </div>
 </template>
 
 <script>
-  import StageVoluneers from './stage_volunteers'
-  import FaqsVolunteers from './faqs_volunteers'
- // import MapboxMap from './mapboxMap'
+import StageVoluneers from './stage_volunteers'
+import FaqsVolunteers from './faqs_volunteers'
+import TafelnMapComponent from "./tafelnMapComponent"
 
-  export default {
-    name: 'volunteerContent',
-    components: {
- //     MapboxMap,
-      FaqsVolunteers,
-      StageVoluneers
-    }
+export default {
+  name: 'volunteerContent',
+  components: {
+    TafelnMapComponent,
+    FaqsVolunteers,
+    StageVoluneers
   }
+}
 </script>

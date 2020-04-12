@@ -1,4 +1,5 @@
-export default {
+/* eslint-disable nuxt/no-cjs-in-config */
+module.exports = {
   mode: 'universal',
   srcDir: 'src/',
   /*
@@ -15,7 +16,10 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css'}
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -29,7 +33,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    // { src: '~/plugins/mapbox', mode: 'client' }
+    { src: '~/plugins/mapbox', mode: 'client' },
   ],
   /*
    ** Nuxt.js dev-modules
@@ -88,9 +92,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-
-    },
-
+    vendor: ['axios', 'map-promisify'],
+    publicPath: `/${require('./secrets.json').NODE_ENV}/_nuxt/`
   }
 }

@@ -5,7 +5,7 @@
                 <div class="mt-8">
                     <AspectRatio :ar="mapAspectRatio" :width="mapWidth">
                         <div id="offset-bg" class="d-none d-lg-block bg-light shadow-lg"></div>
-                        <TafelnMap @showDetail="showDetail" @foundTafeln="foundTafeln" ref="map" class="shadow-lg"/>
+                        <TafelnMap @foundTafeln="foundTafeln" ref="map" class="shadow-lg"/>
                     </AspectRatio>
                 </div>
                 <div class="text-center text-tertiary my-auto">
@@ -40,8 +40,8 @@
 
 <script>
 import AspectRatio from "./tools/aspectRatio";
-import TafelnMap from "mapboxMap";
-import TafelListItem from "tafelnMapListItem";
+import TafelnMap from "./mapboxMap"
+import TafelListItem from "./tafelnMapListItem";
 
 export default {
     name: "TafelnMapComponent",
