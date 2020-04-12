@@ -1,6 +1,5 @@
 <template>
-    <hero-stage :catch-phrases="cp"
-    :stage="stage"/>
+    <hero-stage :catch-phrases="cp" :stage="stage"/>
 </template>
 <script>
     import HeroStage from "./stage";
