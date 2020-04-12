@@ -2,7 +2,7 @@
     <header class="fixed-top bg-light pt-1 pt-sm-3 pb-1 pb-sm-3">
       <div class="container">
         <b-navbar toggleable="sm" class="p-0">
-          <b-navbar-brand href="/">
+          <b-navbar-brand to="/">
             <span class="text-primary barcelony small">Tafel</span>
             <Logo class="logo small"/>
             <span class="text-primary barcelony small">hilfe</span>
