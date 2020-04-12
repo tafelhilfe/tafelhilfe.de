@@ -1,7 +1,5 @@
 <template>
-  <div>
     <Home :home="home"/>
-  </div>
 </template>
 
 <script>
