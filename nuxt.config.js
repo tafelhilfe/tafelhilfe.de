@@ -1,4 +1,5 @@
-export default {
+/* eslint-disable nuxt/no-cjs-in-config */
+module.exports = {
   mode: 'universal',
   srcDir: 'src/',
   /*
@@ -29,7 +30,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    // { src: '~/plugins/mapbox', mode: 'client' }
+    { src: '~/plugins/mapbox', mode: 'client' },
   ],
   /*
    ** Nuxt.js dev-modules
@@ -83,9 +84,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-
-    },
-
+    vendor: ['axios'],
+    publicPath: `/${require('./secrets.json').NODE_ENV}/_nuxt/`
   }
 }
