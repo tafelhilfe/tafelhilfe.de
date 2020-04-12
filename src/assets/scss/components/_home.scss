@@ -16,7 +16,7 @@
   background: linear-gradient(
                   rgba($primary, .8),
                   rgba($primary, .8)
-  ), url('https://placeimg.com/640/480/people') no-repeat;
+  ), url('~assets/images/home_tafeln.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -24,6 +24,6 @@
   background: linear-gradient(
                   rgba($secondary, .8),
                   rgba($secondary, .8)
-  ), url('https://placeimg.com/640/480/nature') no-repeat;
+  ), url('~assets/images/home_volunteer.jpg') no-repeat center center;
   background-size: cover;
 }
