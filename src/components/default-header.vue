@@ -14,7 +14,7 @@
             <b-navbar-nav class="ml-auto">
               <b-nav-item to="#" class="font-weight-bold mr-2 mr-md-4">Wer sind wir?</b-nav-item>
               <b-nav-item to="#" class="font-weight-bold mr-2 mr-md-4">Influencer</b-nav-item>
-              <b-nav-item to="helfer" class="btn-sm btn-secondary shadow rounded-pill font-weight-bold text-center text-white">Tafelsuche</b-nav-item>
+              <b-nav-item to="/helfer" class="btn-sm btn-secondary shadow rounded-pill font-weight-bold text-center text-white">Tafelsuche</b-nav-item>
             </b-navbar-nav>
           </b-collapse>
         </b-navbar>
