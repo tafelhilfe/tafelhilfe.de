@@ -25,7 +25,6 @@
 
 <script>
 import tafeln from '~/assets/tafeln_geo.json'
-import promisify from 'map-promisified'
 
 export default {
   name: 'MapboxMap',
@@ -40,7 +39,10 @@ export default {
   methods: {
     onMapLoaded(event) {
       this.map = event.map
-      this.actions = promisify(event.map)
+      if (process.browser) {
+        this.promisify = require('map-promisified')
+        this.actions = this.promisify(event.map)
+      }
     },
     findByPlz(plz) {
       fetch(
