@@ -1,0 +1,34 @@
+.barcelony {
+  font-family: Barcelony, sans-serif;
+  font-size: 2.5rem;
+  &.small {
+    font-size: 1.5rem;
+  }
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+  margin-right: .25rem;
+  & .tafelhilfe_svg__b {
+    fill: $secondary;
+  }
+  &.small {
+    width: 2rem;
+    height: 2rem;
+    & .tafelhilfe_svg__b {
+      fill: $primary;
+    }
+  }
+}
+
+.navbar-light {
+  & button:focus {
+    outline: 0;
+  }
+  & .navbar-nav {
+    & .nav-link {
+      color: inherit;
+    }
+  }
+}

@@ -22,16 +22,29 @@ $animationDuration: 0.6s;
 /*
  ** import other sass files
  */
+
+/*
+ ** Fonts
+ */
+
+@font-face {
+  font-family: "Barcelony";
+  src: url("~assets/fonts/Barcelony.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 /*
 ** components
  */
-@import "src/assets/scss/components/footer";
-@import "src/assets/scss/components/textImage";
-@import "src/assets/scss/components/faqs";
-@import "src/assets/scss/components/home";
-@import "src/assets/scss/components/helfer";
-@import "src/assets/scss/components/tafeln";
-@import "src/assets/scss/components/stage";
+@import "~assets/scss/components/header";
+@import "~assets/scss/components/footer";
+@import "~assets/scss/components/textImage";
+@import "~assets/scss/components/faqs";
+@import "~assets/scss/components/home";
+@import "~assets/scss/components/helfer";
+@import "~assets/scss/components/tafeln";
+@import "~assets/scss/components/stage";
 
 /*
  ** Heading Font Weight

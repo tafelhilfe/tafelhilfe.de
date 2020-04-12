@@ -72,6 +72,11 @@ module.exports = {
       id: 'yvj2fue'
     }
   },
+  /* Layout Transitions */
+  layoutTransition: {
+    name: "fade",
+    mode: "out-in"
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

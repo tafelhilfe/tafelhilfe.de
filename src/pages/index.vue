@@ -1,7 +1,5 @@
 <template>
-  <div>
     <Home :home="home"/>
-  </div>
 </template>
 
 <script>
@@ -9,6 +7,7 @@
 
   export default {
     name: "home",
+    layout: 'index',
     transition: {
       name: 'fadeDownBig',
       mode: 'out-in'

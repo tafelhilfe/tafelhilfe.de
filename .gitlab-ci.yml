@@ -1,0 +1,85 @@
+image: node:latest
+stages:
+  - build
+  - deploy
+
+variables:
+  AWS_DEFAULT_REGION: eu-central-1
+  STAGING_BUCKET_NAME: dev.tafelhilfe.de
+  LIVE_BUCKET_NAME: try.tafelhilfe.de
+
+cache:
+  paths:
+    - vendor
+
+build:
+  only:
+    - dev
+    - master
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+deploy-staging:
+  only:
+    - dev
+  image: "python:latest"
+  stage: deploy
+  dependencies:
+    - build
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 cp dist s3://${STAGING_BUCKET_NAME}/ --recursive
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+    url: http://${STAGING_BUCKET_NAME}.s3-website.${AWS_DEFAULT_REGION}.amazonaws.com/
+    on_stop: clean_staging
+
+deploy-live:
+  only:
+    - master
+  image: "python:latest"
+  stage: deploy
+  dependencies:
+    - build
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 cp dist s3://${LIVE_BUCKET_NAME}/ --recursive
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+    url: http://${LIVE_BUCKET_NAME}.s3-website.${AWS_DEFAULT_REGION}.amazonaws.com/
+    on_stop: clean_live
+
+clean_staging:
+  only:
+    - dev
+  image: "python:latest"
+  stage: deploy
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 rm s3://${STAGING_BUCKET_NAME}/ --recursive
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+    action: stop
+  when: manual
+
+clean_live:
+  only:
+    - dev
+  image: "python:latest"
+  stage: deploy
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 rm s3://${LIVE_BUCKET_NAME}/ --recursive
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+    action: stop
+  when: manual

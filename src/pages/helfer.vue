@@ -1,7 +1,5 @@
 <template>
-  <div>
     <volunteer-content />
-  </div>
 </template>
 
 <script>
