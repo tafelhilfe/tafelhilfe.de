@@ -40,8 +40,8 @@
 
 <script>
 import AspectRatio from "./tools/aspectRatio";
-import TafelnMap from "./mapboxMap";
-import TafelListItem from "./tafelnMapListItem";
+import TafelnMap from "mapboxMap";
+import TafelListItem from "tafelnMapListItem";
 
 export default {
     name: "TafelnMapComponent",
