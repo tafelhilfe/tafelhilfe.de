@@ -93,6 +93,5 @@ module.exports = {
      ** You can extend webpack config here
      */
     vendor: ['axios', 'map-promisify'],
-    publicPath: `/${require('./secrets.json').NODE_ENV}/_nuxt/`
   }
 }
