@@ -9,12 +9,22 @@
         data() {
             return {
                 cp: {
+                    text: 'Mit #tafelhilfe kannst du dich schnell und einfach bei Tafeln in deiner Nähe engagieren.',
                     phrase: [
                         {
                             id: "0",
-                            headline: "Lorem",
-                            subHeadline: "Ipsum",
-                            text: "Blindtext Wiederholung Blindtext Wiederholung Blindtext Wiederholung Blindtext Wiederholung "
+                            headline: "Die Mensa hat zu?",
+                            subHeadline: "Dann teil doch selber Essen aus!"
+                        },
+                        {
+                            id: "1",
+                            headline: "Dein Fitnessstudio hat zu?",
+                            subHeadline: "Wir brauchen deine starken Arme!"
+                        },
+                        {
+                            id: "2",
+                            headline: "Du musst gerade dein Studium nicht organisieren?",
+                            subHeadline: "Dann organisiere Lebensmittel für Andere!"
                         }
                     ]
                 },
