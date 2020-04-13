@@ -46,16 +46,12 @@
 
     .stageImageTwo {
       top: 49%;
-      left: 12%;
+      right: 0;
     }
   }
 }
 
 @media (max-width: 991px) {
-  .content.container {
-    margin-top: 0 !important;
-    padding: 0 !important;
-  }
   .stage {
     margin-top: 1rem;
     padding: 6.5rem 0 0;

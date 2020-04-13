@@ -20,8 +20,11 @@
             return {
                 slickOptions: {
                     autoplay: true,
-                    autoplaySpeed: 5000,
-                    arrows: false
+                    autoplaySpeed: 7000,
+                    speed: 500,
+                    arrows: false,
+                    draggable: false,
+                    touchMove: false
                 }
             }
         }
