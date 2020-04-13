@@ -74,12 +74,12 @@
             links: [
               {
                 text: 'Impressum',
-                href: '/impressum',
+                href: '/impressum/',
                 target: ''
               },
               {
                 text: 'Datenschutzerklärung',
-                href: '/datapolicy',
+                href: '/datapolicy/',
                 target: ''
               },
               {

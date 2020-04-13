@@ -1,7 +1,5 @@
 <template>
-  <div>
     <Tafeln :tafeln="tafeln"/>
-  </div>
 </template>
 
 <script>
@@ -111,6 +109,12 @@
               {
                 text: 'Lebensmittel liefern',
                 value: 'liefern',
+                active: '',
+                icon: 'app',
+              },
+              {
+                text: 'Lebensmittelausgabe',
+                value: 'ausgabe',
                 active: '',
                 icon: 'app',
               },
