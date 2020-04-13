@@ -31,7 +31,7 @@
               stage: {
                   image: {
                     one: {
-                      src: 'http://placeimg.com/510/260/people'
+                      src: 'https://placeimg.com/510/260/people'
                     },
                     two: {
                       src: 'https://placeimg.com/510/260/nature'
