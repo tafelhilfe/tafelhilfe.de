@@ -4,7 +4,7 @@
   margin-top: -2rem;
   left: 50%;
   margin-left: -7.5rem;
-
+  border: 1px solid $secondary;
 }
 .teaserComponent {
   .teaserItem {
@@ -22,15 +22,12 @@
       box-shadow: 2px 3px 2px $gray-600;
 
       .teaserIcon {
+        background: transparent;
+        background-repeat: no-repeat;
+        background-size: 3rem 3rem;
         width: 3rem;
         height: 3rem;
         margin: 0.5rem;
-        &.desktop {
-          display: block;
-        }
-        &.mobile {
-          display: none;
-        }
       }
     }
   }
@@ -53,15 +50,10 @@
         top: -3.5rem;
         margin-right: -3.5rem;
         .teaserIcon {
+          background-size: 5rem 5rem;
           width: 5rem;
           height: 5rem;
           margin: 1rem;
-          &.desktop {
-            display: none;
-          }
-          &.mobile {
-            display: block;
-          }
         }
       }
     }
