@@ -48,22 +48,27 @@ export default {
       fetch(
         `https://public.opendatasoft.com/api/records/1.0/search/?dataset=postleitzahlen-deutschland&q=${plz}&facet=note&facet=plz`
       )
-        .then(res => {
+        .then((res) => {
           return res.json()
-        }).then(data => {
-        // setup Coordinates of searched PLZ
-        var coords = {}
-        coords.lat = data.records[0].geometry.coordinates[1]
-        coords.lng = data.records[0].geometry.coordinates[0]
+        })
+        .then((data) => {
+          // setup Coordinates of searched PLZ
+        const coords = {}
+        if (data.records[0] !== undefined) {
+          coords.lat = data.records[0].geometry.coordinates[1]
+          coords.lng = data.records[0].geometry.coordinates[0]
 
-        //filter and sort all Tafeln by distance between searched PLZ and Tafel
-        var nearTafeln = tafeln
-          .map(tafel => ({ ...tafel, dist: this.radiusBetweenCoords(coords, tafel.coords) }))
-          .sort((a, b) => a.dist - b.dist)
-          .slice(0, 30)
+          //filter and sort all Tafeln by distance between searched PLZ and Tafel
+          var nearTafeln = tafeln
+            .map(tafel => ({ ...tafel, dist: this.radiusBetweenCoords(coords, tafel.coords) }))
+            .sort((a, b) => a.dist - b.dist)
+            .slice(0, 30)
 
-        this.flyToCoords(coords)    // move map to PLZ
-        this.$emit('foundTafeln', nearTafeln) // return found Tafeln near PLZ
+          this.flyToCoords(coords)    // move map to PLZ
+          this.$emit('foundTafeln', nearTafeln) // return found Tafeln near PLZ
+        } else {
+          this.$emit('errorFetching')
+        }
       })
     },
 
