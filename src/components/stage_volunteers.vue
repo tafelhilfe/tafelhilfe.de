@@ -31,10 +31,10 @@
               stage: {
                   image: {
                     one: {
-                      src: 'https://placeimg.com/510/260/people'
+                      src: 'https://tafel-jugend.de/fileadmin/user_upload/ueber_uns/vor_ort_2_intro.jpg'
                     },
                     two: {
-                      src: 'https://placeimg.com/510/260/nature'
+                      src: 'https://tafel-jugend.de/fileadmin/_processed_/b/e/csm_nachbarschaftschallenge_47d6b0a700.png'
                     }
                   }
               }
