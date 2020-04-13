@@ -27,6 +27,9 @@
 
 @media (min-width: 992px) {
   .stage {
+    .col-lg {
+      width: 50%;
+    }
     .catchPhraseContainer {
       margin-top: 7rem;
     }
@@ -35,14 +38,14 @@
       min-height: 35rem;
 
       .stageImageOne {
-        top: 7rem;
-        left: 1rem;
+        top: 21%;
+        left: -6%;
       }
+    }
 
-      .stageImageTwo {
-        top: 15rem;
-        left: 11rem;
-      }
+    .stageImageTwo {
+      top: 49%;
+      left: 12%;
     }
   }
 }
@@ -53,11 +56,12 @@
     padding: 0 !important;
   }
   .stage {
-    padding: 4.5rem 0 0;
+    padding: 6.5rem 0 0;
     background-color: $tertiary;
 
     .catchPhraseContainer {
       padding-left: 1rem;
+
       .catchPhrase {
         hr {
           margin-right: 20%;
@@ -74,13 +78,13 @@
       background: $white;
 
       .stage-image-container {
-        min-height: 30rem;
+        min-height: 40rem;
         margin-top: -3rem;
 
         .stageImageOne {
           max-height: none;
           height: auto;
-          top: 1rem;
+          top: 3%;
           left: 10%;
           width: 80%;
         }
@@ -88,7 +92,7 @@
         .stageImageTwo {
           max-height: none;
           height: auto;
-          top: 11rem;
+          top: 45%;
           left: 15%;
           width: 70%;
 
@@ -97,3 +101,24 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .stage {
+    .mobileStage {
+      .stage-image-container {
+        min-height: 30rem;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .stage {
+    padding: 4.5rem 0 0;
+    .mobileStage {
+      .stage-image-container {
+        min-height: 25rem;
+      }
+    }
+  }
+}
+

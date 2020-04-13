@@ -28,12 +28,13 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/custom.scss'],
+  css: ['@/assets/scss/custom.scss', 'vue-slick-carousel/dist/vue-slick-carousel.css'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     { src: '~/plugins/mapbox', mode: 'client' },
+    { src: './plugins/vue-slick-carousel.js' },
   ],
   /*
    ** Nuxt.js dev-modules
