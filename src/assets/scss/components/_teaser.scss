@@ -1,0 +1,69 @@
+.areaInfoField {
+  position: absolute;
+  width: 15rem;
+  margin-top: -2rem;
+  left: 50%;
+  margin-left: -7.5rem;
+
+}
+.teaserComponent {
+  .teaserItem {
+    margin: 2rem 1rem 2rem;
+    .teaserContent {
+      padding: 1.5rem 1.5rem 5rem;
+    }
+
+    .teaserIconContainer {
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+      right: 1rem;
+      top: -1.5rem;
+      box-shadow: 2px 3px 2px $gray-600;
+
+      .teaserIcon {
+        width: 3rem;
+        height: 3rem;
+        margin: 0.5rem;
+        &.desktop {
+          display: block;
+        }
+        &.mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .teaserComponent {
+    .teaserItem {
+      margin-bottom: 5rem;
+      &:last-child {
+        margin-bottom: 2rem;
+      }
+      .teaserContent {
+        padding-top: 4.5rem;
+      }
+
+      .teaserIconContainer {
+        width: 7rem;
+        height: 7rem;
+        right: 50%;
+        top: -3.5rem;
+        margin-right: -3.5rem;
+        .teaserIcon {
+          width: 5rem;
+          height: 5rem;
+          margin: 1rem;
+          &.desktop {
+            display: none;
+          }
+          &.mobile {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

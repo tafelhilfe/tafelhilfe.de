@@ -7,7 +7,7 @@
                             <catch-phrase :catch-phrases="catchPhrases"/>
                     </div>
                 </b-col>
-                <b-col lg class="mobileStage">
+                <b-col lg class="mobileStage row-full">
                     <div class="stage-image-container p-5">
                         <b-img class="stageImageOne" :src="stage.image.one.src" :alt="stage.image.one.alt"/>
                         <b-img class="stageImageTwo" :src="stage.image.two.src" :alt="stage.image.two.alt"/>
