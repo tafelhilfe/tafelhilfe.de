@@ -18,5 +18,3 @@
         props: ['teaser']
     }
 </script>
-
-<style scoped

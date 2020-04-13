@@ -1,17 +1,8 @@
 .stage {
   margin-top: 5rem;
-  .catchPhraseContainer {
-    .catchPhrase {
-      hr {
-        margin-right: 20%;
-      }
-    }
-  }
-
   .stage-image-container {
     background: url(" ~assets/images/background-hero.svg");
     background-size: 100% 100%;
-
     .stageImageOne {
       position: absolute;
       max-height: 13rem;
@@ -68,10 +59,6 @@
       padding-left: 1rem;
 
       .catchPhrase {
-        hr {
-          margin-right: 20%;
-        }
-
         h2, p {
           color: $white !important;
         }
