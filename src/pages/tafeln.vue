@@ -6,7 +6,7 @@
   import Tafeln from "../components/tafeln";
 
   export default {
-    name: "tafeln",
+    name: "TafelnPage",
     transition: 'fadeRight',
     components: {
       Tafeln

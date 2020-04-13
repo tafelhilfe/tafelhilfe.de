@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div id="main">
     <myheader/>
-    <nuxt/>
-    <myfooter/>
+    <nuxt id="content"/>
+    <myfooter id="footer"/>
   </div>
 </template>
 <script>
@@ -16,3 +16,17 @@
     },
   }
 </script>
+
+<style>
+  #main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #content {
+    flex: 1 0 auto;
+  }
+  #footer {
+    flex-shrink: 0;
+  }
+</style>
