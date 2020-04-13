@@ -4,7 +4,7 @@
             <div :v-if="showCP === item.id">
                 <h1 class="text-secondary">{{item.headline}}</h1>
                 <hr class="border-2 rounded border-primary "/>
-                <h2 class="text-dark">{{item.subHeadline}}</h2>
+                <h2 class="text-tertiary">{{item.subHeadline}}</h2>
                 <p v-html="item.text"></p>
             </div>
         </div>

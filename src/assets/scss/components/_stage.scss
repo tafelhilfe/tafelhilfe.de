@@ -6,29 +6,33 @@
       }
     }
   }
+
   .stage-image-container {
     background: url("~assets/images/background-hero.svg");
     background-size: 100% 100%;
+
     .stageImageOne {
       position: absolute;
-      max-height: 11rem;
+      max-height: 13rem;
       z-index: 5;
     }
 
     .stageImageTwo {
       position: absolute;
-      max-height: 11rem;
+      max-height: 13rem;
       z-index: 10;
     }
   }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 992px) {
   .stage {
     .catchPhraseContainer {
       margin-top: 7rem;
     }
+
     .stage-image-container {
-      min-height: 30rem;
+      min-height: 35rem;
 
       .stageImageOne {
         top: 7rem;
@@ -42,27 +46,53 @@
     }
   }
 }
-@media (max-width: 1023px) {
+
+@media (max-width: 991px) {
+  .content.container {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
   .stage {
+    padding: 4.5rem 0 0;
+    background-color: $tertiary;
+
     .catchPhraseContainer {
+      padding-left: 1rem;
       .catchPhrase {
         hr {
           margin-right: 20%;
         }
+
+        h2, p {
+          color: $white !important;
+        }
       }
     }
 
-    .stage-image-container {
-      min-height: 30rem;
+    .mobileStage {
+      margin-top: 2rem;
+      background: $white;
 
-      .stageImageOne {
-        top: 7rem;
-        left: 1rem;
-      }
+      .stage-image-container {
+        min-height: 30rem;
+        margin-top: -3rem;
 
-      .stageImageTwo {
-        top: 15rem;
-        left: 11rem;
+        .stageImageOne {
+          max-height: none;
+          height: auto;
+          top: 1rem;
+          left: 10%;
+          width: 80%;
+        }
+
+        .stageImageTwo {
+          max-height: none;
+          height: auto;
+          top: 11rem;
+          left: 15%;
+          width: 70%;
+
+        }
       }
     }
   }

@@ -2,20 +2,23 @@
   margin-bottom: 30px;
   .faqs-tablist {
     width: 90%;
-    margin: 0 auto 15px;
+    margin: 0 auto 1rem;
     .card {
       border: none;
       border-bottom: 1px solid $gray-600;
       border-radius: 0;
       header {
         cursor: pointer;
+        .faqs-card-headline {
+          width: 88%;
+        }
       }
     }
   }
   .faq-icon {
     position: absolute;
-    right: 30px;
-    top: 14px;
-    font-size: 24px;
+    right: 1rem;
+    top: 0.9rem;
+    font-size: 1.5rem;
   }
 }
