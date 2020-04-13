@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       accessToken: 'pk.eyJ1IjoibGdhc3RsZXIiLCJhIjoiY2s2Y28wemVsMGNqeTNscXh3Ym9pbjc0OCJ9.GaJVlB5a2mEQ_PEu7qZ23A', // Mapbox access token
-      mapStyle: 'mapbox://styles/lgastler/ck8ngh4k82kwh1io0d1mmajla/draft', // Mapbox style
+      mapStyle: 'mapbox://styles/lgastler/ck8ngh4k82kwh1io0d1mmajla', // Mapbox style
       tafeln: tafeln // currently loaded from JSON in the future loaded from DB
     }
   },
