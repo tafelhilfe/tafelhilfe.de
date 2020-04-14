@@ -10,7 +10,10 @@
 
         <b-navbar-toggle id="navbar-toggle" target="nav-collapse" class="shadow-none">
           <template v-slot:default="{ expanded }">
-            <div>
+            <div v-if="expanded">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <div v-else>
               <svg
                 fill="currentColor"
                 viewBox="0 0 20 20"
