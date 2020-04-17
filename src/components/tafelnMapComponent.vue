@@ -10,7 +10,12 @@
               id="offset-bg"
               class="d-none d-lg-block bg-light shadow-lg"
             ></div>
-            <TafelnMap ref="map" class="shadow-lg" @errorFetching="showPLZError" @foundTafeln="foundTafeln" />
+            <TafelnMap
+              ref="map"
+              class="shadow-lg"
+              @errorFetching="showPLZError"
+              @foundTafeln="foundTafeln"
+            />
           </AspectRatio>
         </div>
         <div class="text-center text-tertiary my-auto">
@@ -41,12 +46,15 @@
                   >
                 </div>
                 <div v-if="errorVisible" class="text-danger">
-                  <p>Die eingegebene Postleizahl konnte nicht gefunden werden. <br class="d-md-none" />Bitte versuche es erneut!</p>
+                  <p>
+                    Die eingegebene Postleizahl konnte nicht gefunden werden.
+                    <br class="d-md-none" />Bitte versuche es erneut!
+                  </p>
                 </div>
               </b-form>
             </div>
           </div>
-          <div v-if="nearTafeln.length > 0" class="mx-md-8">
+          <div v-if="visibleTafeln.length > 0" class="mx-md-8">
             <h3>Tafeln in deiner Nähe</h3>
             <div class="mb-4">
               <ul class="list-group shadow mt-4">
@@ -55,6 +63,8 @@
                   :key="tafel.name"
                   :index="index"
                   :tafel="tafel"
+                  @selected="selectedTafel"
+                  @togglePopup="togglePopup"
                 />
               </ul>
             </div>
@@ -123,7 +133,6 @@ export default {
     findByPlz() {
       this.errorVisible = false
       this.nearTafeln = []
-      this.visibleTafeln = []
       if(this.plz.length > 0 && this.plz.length < 6) {
         this.$refs.map.findByPlz(this.plz)
       } else {
@@ -131,19 +140,30 @@ export default {
       }
     },
     foundTafeln(value) {
+      this.visibleTafeln = []
       this.nearTafeln = value
       this.loadTafeln()
     },
     // adds new Tafeln to the visible array
     loadTafeln() {
-      this.visibleTafeln = this.visibleTafeln.concat(
-        this.nearTafeln.splice(0, 3)
-      )
+      try {
+        this.visibleTafeln = this.visibleTafeln.concat(
+          this.nearTafeln.splice(0, 3)
+        )
+      } catch(e) {
+        console.log(e)
+      }
     },
     showPLZError() {
-      this.errorVisible = !this.errorVisible
+      this.errorVisible = true
       this.$refs.plzInput.focus()
       this.plz = ''
+    },
+    selectedTafel(tafel) {
+      this.$refs.map.flyToCoords(tafel.coords, 12)
+    },
+    togglePopup(tafel) {
+      this.$refs.map.togglePopup(tafel)
     }
   }
 }

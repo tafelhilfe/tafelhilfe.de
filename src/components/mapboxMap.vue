@@ -1,40 +1,60 @@
 <template>
   <no-ssr>
     <MglMap
-      :interactive="false"
-      @load="onMapLoaded"
-      :center="[10.0183, 51.1334]"
+      :interactive="true"
+      :center="tafeln.length > 0 ? tafeln[0].coords : [10.0183, 51.1334]"
       :zoom="4"
-      :maxBounds="[
+      :max-bounds="[
         [5.391687, 46.930529],
         [15.614991, 55.662883]
       ]"
-      :accessToken="accessToken"
-      :mapStyle="mapStyle"
+      :access-token="accessToken"
+      :map-style="mapStyle"
+      :attribution-control="false"
+      @load="onMapLoaded"
     >
+      <MglNavigationControl position="top-right" />
       <MglMarker
-        :key="tafel.name"
-        v-for="tafel in tafeln"
+        v-for="(tafel, i) in tafeln"
+        :key="tafel.id"
+        :ref="tafel.id"
         :coordinates="[tafel.coords.lng, tafel.coords.lat]"
+        @click="markerClicked"
       >
-        <b-icon-house-fill slot="marker" variant="secondary"/>
+        <b-icon-house-fill
+          v-if="tafel.currentStatus && tafel.currentStatus.open"
+          slot="marker"
+          variant="secondary"
+        />
+        <b-icon-house-fill
+          v-else-if="tafel.currentStatus && !tafel.currentStatus.open"
+          slot="marker"
+          variant="danger"
+        />
+        <b-icon-house-fill v-else slot="marker" variant="warning" />
+        <MglPopup>
+          <div>{{ tafel.name }}</div>
+        </MglPopup>
       </MglMarker>
     </MglMap>
   </no-ssr>
 </template>
 
 <script>
-import tafeln from '~/assets/tafeln_geo.json'
-
 export default {
   name: 'MapboxMap',
 
   data() {
     return {
-      accessToken: 'pk.eyJ1IjoibGdhc3RsZXIiLCJhIjoiY2s2Y28wemVsMGNqeTNscXh3Ym9pbjc0OCJ9.GaJVlB5a2mEQ_PEu7qZ23A', // Mapbox access token
-      mapStyle: 'mapbox://styles/lgastler/ck8ngh4k82kwh1io0d1mmajla', // Mapbox style
-      tafeln: tafeln // currently loaded from JSON in the future loaded from DB
+      accessToken: process.env.MAPBOX_API_KEY, // Mapbox access token
+      mapStyle: 'mapbox://styles/lgastler/ck8ngh4k82kwh1io0d1mmajla',
+      tafeln: [] // Mapbox style
     }
+  },
+
+  created() {
+    this.map = null
+    this.fetchTafeln()
   },
   methods: {
     onMapLoaded(event) {
@@ -44,81 +64,56 @@ export default {
         this.actions = this.promisify(event.map)
       }
     },
+    fetchTafeln() {
+      this.$api.get('/status').then((res) => {
+        this.addTafeln(res.data)
+      })
+    },
     findByPlz(plz) {
-      fetch(
-        `https://public.opendatasoft.com/api/records/1.0/search/?dataset=postleitzahlen-deutschland&q=${plz}&facet=note&facet=plz`
-      )
+      this.$api
+        .get('/tafeln/geo?plz=' + plz)
         .then((res) => {
-          return res.json()
+          return res.data
+        })
+        .catch((e) => {
+          this.$emit('errorFetching')
         })
         .then((data) => {
           // setup Coordinates of searched PLZ
-        const coords = {}
-        if (data.records[0] !== undefined) {
-          coords.lat = data.records[0].geometry.coordinates[1]
-          coords.lng = data.records[0].geometry.coordinates[0]
-
-          //filter and sort all Tafeln by distance between searched PLZ and Tafel
-          var nearTafeln = tafeln
-            .map(tafel => ({ ...tafel, dist: this.radiusBetweenCoords(coords, tafel.coords) }))
-            .sort((a, b) => a.dist - b.dist)
-            .slice(0, 30)
-
-          this.flyToCoords(coords)    // move map to PLZ
-          this.$emit('foundTafeln', nearTafeln) // return found Tafeln near PLZ
-        } else {
-          this.$emit('errorFetching')
+          if (data !== undefined && data.tafeln.length > 0) {
+            this.addTafeln(data.tafeln)
+            this.flyToCoords(data.center) // move map to PLZ
+            this.$emit('foundTafeln', data.tafeln) // return found Tafeln near PLZ
+          } else {
+            this.$emit('errorFetching')
+          }
+        })
+    },
+    markerClicked(e) {
+      this.flyToCoords(e.marker._lngLat)
+    },
+    addTafeln(tafeln) {
+      tafeln.forEach((tafel) => {
+        if (!this.tafeln.find(el => el.id === tafel.id )) {
+          this.tafeln.push(tafel)
         }
       })
     },
-
-    /**
-     * Calculates the distance between 2 Positions based on their Coordinates using the haversine formula
-     * @param coords1 first Position
-     * @param coords2 second Position
-     * @returns {number} Distance bewteen the two Positions
-     */
-    radiusBetweenCoords(coords1, coords2) {
-      var R = 6371 // the earths radius in km
-      var phi1 = this.d2r(coords1.lat)
-      var phi2 = this.d2r(coords2.lat)
-      var deltaPhi = this.d2r(coords2.lat - coords1.lat)
-      var deltaLambda = this.d2r(coords2.lng - coords1.lng)
-
-      var a = Math.sin(deltaPhi / 2) * Math.sin(deltaPhi / 2) + Math.cos(phi1) * Math.cos(phi2) * Math.sin(deltaLambda /
-        2) * Math.sin(deltaLambda / 2)
-      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
-      var dist = R * c
-      return dist
+    togglePopup(tafel) {
+      this.$refs[tafel.id][0].togglePopup()
     },
-
-    /**
-     * Converting degrees to radians
-     * @param degree
-     * @returns {number}
-     */
-    d2r(degree) {
-      var pi = Math.PI
-      return degree / (180 / pi)
-    },
-
     /**
      * async method to move Mapbox card to new Position
      * @param coords Coordinates
      * @returns {Promise<void>}
      */
-    async flyToCoords(coords) {
+    async flyToCoords(coords, zoom = 9) {
       await this.actions.flyTo({
         center: coords,
-        zoom: 9,
+        zoom,
         essential: true // this animation is considered essential with respect to prefers-reduced-motion
       })
     }
-  },
-
-  created() {
-    this.map = null
   }
 }
-
 </script>
