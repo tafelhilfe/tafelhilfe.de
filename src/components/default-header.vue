@@ -1,17 +1,29 @@
 <template>
-  <header class="fixed-top pt-1 pt-sm-3 pb-1 pb-sm-3 bg-white">
+  <header class="fixed-top px-1 py-sm-3 bg-white shadow">
     <div class="container">
-      <b-navbar toggleable="md" class="p-0">
+      <b-navbar toggleable="md" class="p-0 m-2">
         <b-navbar-brand to="/">
-          <span class="text-primary barcelony small">tafel</span>
-          <Logo class="logo small" />
-          <span class="text-primary barcelony small">hilfe</span>
+          <Logo class="text-secondary logo small" />
         </b-navbar-brand>
 
-        <b-navbar-toggle id="navbar-toggle" target="nav-collapse" class="shadow-none">
+        <b-navbar-toggle
+          id="navbar-toggle"
+          target="nav-collapse"
+          class="shadow-none"
+        >
           <template v-slot:default="{ expanded }">
             <div v-if="expanded">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                style="width: 2rem; height: 2rem"
+              >
+                <path d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
             </div>
             <div v-else>
               <svg
@@ -31,22 +43,24 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
-            <a
-              to="#"
-              class="nav-bar-item font-weight-bold mr-2 py-2 px-4 rounded-pill"
+            <router-link
+              to="/ueberuns/"
+              class="nav-bar-item text-tertiary font-weight-bold mt-2 mt-md-0 mr-md-2 mb-2 mb-md-0 py-2 px-2 px-lg-4 rounded-pill"
             >
               Wer sind wir?
-            </a>
-            <a
-              to="#"
-              class="nav-bar-item font-weight-bold mr-2 mr-md-4 py-2 px-4 rounded-pill"
+            </router-link>
+            <router-link
+              to="/influencer/"
+              class="nav-bar-item text-tertiary font-weight-bold mr-md-2 mb-2 mb-md-0 py-2 px-2 px-lg-4 rounded-pill"
             >
               Influencer
-            </a>
+            </router-link>
             <a
               id="nav-bar-cta"
-              to="#"
-              class="cta btn-sm btn-secondary py-2 px-4 shadow rounded-pill font-weight-bold text-center text-white"
+              v-scroll-to="'#tafelmap'"
+              v-b-toggle="'nav-collapse'"
+              href="#"
+              class="cta btn-sm btn-secondary mb-4 mb-md-0 py-2 px-4 shadow rounded-pill font-weight-bold text-center text-white"
             >
               Tafelsuche
             </a>
@@ -58,7 +72,7 @@
 </template>
 
 <script>
-import Logo from '~/assets/images/tafelhilfe.svg'
+import Logo from '~/assets/images/tafelhilfe_logo_basic_green.svg?inline'
 
 export default {
   name: 'Myheader',
@@ -69,7 +83,7 @@ export default {
 </script>
 <style scoped>
 #navbar-toggle {
-  border: 0
+  border: 0;
 }
 
 .nav-bar-item {
@@ -86,7 +100,7 @@ export default {
 }
 
 #nav-bar-cta:hover {
-  background: #09714E;
+  background: #09714e;
   cursor: pointer;
 }
 </style>

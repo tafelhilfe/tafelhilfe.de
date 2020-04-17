@@ -51,7 +51,13 @@
                 :target="item.target"
               >
                 <div class="bg-white shadow p-2 rounded-circle">
-                  <fa :icon="item.icon" size="2x" :class="item.color" class="fa-fw fa-fh" style="height: 40px"/>
+                  <fa
+                    :icon="item.icon"
+                    size="2x"
+                    :class="item.color"
+                    class="fa-fw fa-fh"
+                    style="height: 40px; width: 40px"
+                  />
                 </div>
               </b-link>
               <router-link v-else :to="item.href">{{ item.text }}</router-link>
@@ -59,9 +65,7 @@
           </ul>
         </div>
         <div class="col-6 col-sm d-none d-lg-block">
-          <Slogan
-            class="text-tertiary tk-flood-std float-right"
-          />
+          <Slogan class="text-tertiary tk-flood-std float-right" />
         </div>
       </b-row>
       <div class="border-top border-gray-700 p-4">
@@ -74,7 +78,7 @@
 </template>
 
 <script>
-import Slogan from "../assets/images/slogan.svg"
+import Slogan from '../assets/images/tafelhilfe_slogan.svg?inline'
 
 export default {
   name: 'Myfooter',
