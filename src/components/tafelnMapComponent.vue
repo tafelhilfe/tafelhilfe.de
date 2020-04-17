@@ -1,5 +1,5 @@
 <template>
-  <div class="container-lg content">
+  <div id="tafelmap" class="container-lg content">
     <div class="row mb-5">
       <div
         class="d-flex flex-column flex-column-reverse flex-lg-row justify-content-center"

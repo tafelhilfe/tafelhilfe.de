@@ -1,5 +1,5 @@
 <template>
-    <Tafeln :tafeln="tafeln"/>
+    <Tafeln class="mt-8" :tafeln="tafeln"/>
 </template>
 
 <script>

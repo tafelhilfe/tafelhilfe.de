@@ -26,7 +26,7 @@
           },
           helfer: {
             headline: 'Für Helfer',
-            text: 'Du willst bei der Tafel unterstützen?<br/>Wir zeigen Dir, wo und wie Du Dich einbringen kannst.',
+            text: 'Du willst als Helfer*in bei der Tafel unterstützen?<br/>Wir zeigen Dir, wo und wie Du Dich einbringen kannst.',
             button: 'Hier entlang',
             href: '/helfer/'
           }

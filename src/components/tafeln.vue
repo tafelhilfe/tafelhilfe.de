@@ -82,7 +82,9 @@
 </template>
 
 <script>
-    export default {
+  var VueScrollTo = require('vue-scrollto');
+
+  export default {
         name: "tafeln",
         props: ['tafeln'],
         data() {
@@ -206,6 +208,7 @@
                 if(this.tafeln.progress.step >= 1) {
                     this.tafeln.startButton = 'Weiter'
                 }
+                VueScrollTo.scrollTo('body', 0)
             },
             prevStep() {
                 this.tafeln.progress.step -= 1;
@@ -215,6 +218,7 @@
                     this.tafeln.q1.options[0].active = '';
                     this.tafeln.q1.options[1].active = '';
                 }
+              VueScrollTo.scrollTo('body', 0)
             },
             sendData() {
 
