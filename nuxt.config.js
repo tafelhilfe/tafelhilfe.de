@@ -14,11 +14,35 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
-      }
+      },
+      { name: 'msapplication-TileColor', content: '#0e9f6e' },
+      { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16'
+      },
+      { rel: 'manifest', href: 'site.webmanifest' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '0e9f6e' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css'}
+      {
+        rel: 'stylesheet',
+        href: 'https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css'
+      }
     ]
   },
   /*
@@ -28,7 +52,10 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/custom.scss', 'vue-slick-carousel/dist/vue-slick-carousel.css'],
+  css: [
+    '@/assets/scss/custom.scss',
+    'vue-slick-carousel/dist/vue-slick-carousel.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -53,11 +80,21 @@ module.exports = {
 
     '@nuxtjs/axios',
 
-    'svg-to-vue-component/nuxt',
+    '@nuxtjs/svg',
 
     'nuxt-fontawesome',
 
     'nuxt-webfontloader',
+
+    [
+      'vue-scrollto/nuxt',
+      {
+        duration: 500,
+        easing: 'ease-in-out',
+        cancelable: true,
+        offset: -100
+      }
+    ]
   ],
   bootstrapVue: {
     icons: true,
@@ -80,8 +117,8 @@ module.exports = {
   },
   /* Layout Transitions */
   layoutTransition: {
-    name: "fade",
-    mode: "out-in"
+    name: 'fade',
+    mode: 'out-in'
   },
   /*
    ** Axios module configuration
@@ -95,7 +132,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    vendor: ['axios', 'map-promisify'],
+    vendor: ['axios', 'map-promisify']
   },
   env: {
     TAFELHILFE_API_KEY: 'BQFtUCgMdC6bjABxiQ27A1hZBQydwTUv6hvuxXgZ',
