@@ -96,5 +96,10 @@ module.exports = {
      ** You can extend webpack config here
      */
     vendor: ['axios', 'map-promisify'],
+  },
+  env: {
+    TAFELHILFE_API_KEY: 'BQFtUCgMdC6bjABxiQ27A1hZBQydwTUv6hvuxXgZ',
+    MAPBOX_API_KEY:
+      'pk.eyJ1IjoibGdhc3RsZXIiLCJhIjoiY2s5NDNlaW1oMDFtZjNnb2YzczY5ajZqMCJ9.K8kUn4MHA3WhzLFxFfoZFQ'
   }
 }
