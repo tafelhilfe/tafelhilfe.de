@@ -1,19 +1,19 @@
 <template>
   <div>
-    <myheader :variant="variant"/>
+    <Header :variant="variant" />
     <nuxt />
-    <myfooter/>
+    <Footer />
   </div>
 </template>
 <script>
-  import Myfooter from '../components/footer'
-  import Myheader from '../components/home-header'
-  export default {
-    components: { Myheader, Myfooter },
-    data() {
-      return {
-        variant: 'white'
-      }
+import Footer from '../components/footer'
+import Header from '../components/home-header'
+export default {
+  components: { Header, Footer },
+  data() {
+    return {
+      variant: 'white'
     }
   }
+}
 </script>

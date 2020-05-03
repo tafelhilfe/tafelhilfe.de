@@ -77,21 +77,22 @@
         style="margin-left: 2.5rem"
       >
         <div class="my-2 font-weight-bold">
-          <div>Ansprechpartner: {{ tafel.ansprechpartner }}</div>
-          <div>Tel: {{ tafel.tel }}</div>
+          <div v-if="tafel.ansprechpartner">Ansprechpartner: {{ tafel.ansprechpartner }}</div>
+          <div v-if="tafel.tel">Tel: {{ tafel.tel }}</div>
+          <div v-if="tafel.mail">E-Mail: {{ tafel.mail }}</div>
         </div>
-        <div v-if="this.tafel.currentStatus" class="font-medium border-top">
-          <h6 v-if="!this.tafel.currentStatus.open" class="my-2 font-weight-bolder">Diese Tafel ist leider geschlossen.</h6>
-          <div v-if="this.tafel.currentStatus.needsHelper">
+        <div v-if="currentStatus" class="font-medium border-top">
+          <h6 v-if="!currentStatus.open" class="my-2 font-weight-bolder">Diese Tafel ist leider geschlossen.</h6>
+          <div v-if="help.needHelp">
             <h6 class="my-2 font-weight-bolder">Unterstützung benötigt bei:</h6>
             <ul>
-              <!--Currenty temporary until we get real data-->
-              <li v-if="this.tafel.currentStatus.kindOfHelp.lebensmittel_verarbeitung" class="ml-n4">Lebensmittel Verarbeitung</li>
-              <li v-if="this.tafel.currentStatus.kindOfHelp.lebensmittelabholung" class="ml-n4">Lebensmittel abholen und an die Tafel liefern</li>
-              <li v-if="this.tafel.currentStatus.kindOfHelp.ausgabe" class="ml-n4">Ausgabe von Lebensmittel</li>
-              <li v-if="this.tafel.currentStatus.kindOfHelp.liefern" class="ml-n4">Lebensmittel ausliefern</li>
-              <li v-if="this.tafel.currentStatus.kindOfHelp.sonstiges" class="ml-n4">{{ this.tafel.currentStatus.kindOfHelp.sonstiges }}</li>
+              <template v-for="choice in help.choices">
+                <li :key="choice" class="ml-n4">{{ choice }}</li>
+              </template>
             </ul>
+          </div>
+          <div v-else>
+            <h6 class="my-2 font-weight-bolder">Die ausgewählte Tafel benötigt aktuell keinerlei Unterstützung.</h6>
           </div>
         </div>
         <div v-else class="font-medium border-top">
@@ -113,6 +114,14 @@ export default {
     return {
       random: Math.floor(Math.random() * 3), // currentyl temporary only for displaying the current status of a Tafel
       visible: false
+    }
+  },
+  computed: {
+    help() {
+      return this.tafel.currentStatus.kindOfHelp
+    },
+    currentStatus() {
+      return this.tafel.currentStatus
     }
   },
   methods: {

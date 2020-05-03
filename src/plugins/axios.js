@@ -11,7 +11,7 @@ export default function ({ $axios, redirect }, inject) {
 
   // Set baseURL to something different
   api.setBaseURL('https://api.tafelhilfe.de')
-
+  //api.setBaseURL('http://localhost:5000/dev')
   // Inject to context as $api
   inject('api', api)
 }

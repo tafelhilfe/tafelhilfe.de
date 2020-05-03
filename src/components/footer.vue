@@ -2,13 +2,13 @@
   <footer class="container-fluid bg-light">
     <b-container>
       <b-row class="pt-5 pb-5 justify-content-between">
-        <div class="col-6 col-sm-12 col-md">
+        <div class="col-12 col-sm-12 col-md">
           <h6 class="pb-2 text-uppercase border-bottom border-dark">
             {{ footer.col1.headline }}
           </h6>
           <p v-html="footer.col1.text"></p>
         </div>
-        <div class="col-6 col-sm">
+        <div class="col-12 col-sm">
           <h6 class="pb-2 text-uppercase border-bottom border-dark">
             {{ footer.col2.headline }}
           </h6>
@@ -19,7 +19,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-sm">
+        <div class="col-12 col-sm">
           <h6 class="pb-2 text-uppercase border-bottom border-dark">
             {{ footer.col3.headline }}
           </h6>
@@ -35,7 +35,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-sm">
+        <div class="col-12 col-sm">
           <h6 class="pb-2 text-uppercase border-bottom border-dark">
             {{ footer.col4.headline }}
           </h6>

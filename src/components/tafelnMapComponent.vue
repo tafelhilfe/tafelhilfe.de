@@ -1,10 +1,11 @@
 <template>
-  <div id="tafelmap" class="container-lg content">
-    <div class="row mb-5">
+  <div class="container-lg content mb-0 mb-lg-5">
+    <a id="tafelmap"></a>
+    <div class="row">
       <div
         class="d-flex flex-column flex-column-reverse flex-lg-row justify-content-center"
       >
-        <div class="mt-8">
+        <div class="mt-8 mt-md-0">
           <AspectRatio :ar="mapAspectRatio" :width="mapWidth">
             <div
               id="offset-bg"
@@ -150,6 +151,7 @@ export default {
         this.visibleTafeln = this.visibleTafeln.concat(
           this.nearTafeln.splice(0, 3)
         )
+        console.log(this.visibleTafeln)
       } catch(e) {
         console.log(e)
       }
@@ -175,5 +177,10 @@ export default {
   height: 100%;
   width: 100%;
   transform: translate(1rem, 1rem);
+}
+#tafelmap {
+  display: block;
+  position: relative;
+  top: -250px;
 }
 </style>

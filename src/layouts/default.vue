@@ -1,7 +1,7 @@
 <template>
   <div id="main">
     <myheader/>
-    <nuxt id="content"/>
+    <nuxt id="content" class="mt-20 mt-sm-32"/>
     <myfooter id="footer"/>
   </div>
 </template>

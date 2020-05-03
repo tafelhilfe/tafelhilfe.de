@@ -1,5 +1,5 @@
 <template>
-    <b-container class="stage" fluid>
+    <b-container class="stage mt-n16" fluid>
         <b-container>
             <b-row>
                 <b-col lg class="mr-5 pr-2">

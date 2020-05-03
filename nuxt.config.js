@@ -63,7 +63,9 @@ module.exports = {
     { src: '~/plugins/mapbox', mode: 'client' },
     { src: './plugins/vue-slick-carousel.js' },
     { src: './plugins/axios' },
-    { src: './plugins/vuemq' }
+    { src: './plugins/vuemq' },
+    { src: './mixins/formMixin.js' },
+    { src: `~plugins/vee-validate`, ssr: true},
   ],
   /*
    ** Nuxt.js dev-modules

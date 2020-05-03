@@ -1,6 +1,6 @@
 <template>
   <div class="content container">
-    <div class="mx-auto py-6 mt-8">
+    <div class="mx-auto py-6">
       <div class="px-4 py-4">
         <h1>Wie ist <span class="text-secondary">#tafelhilfe</span> entstanden?</h1>
         <h3>Das Team #tafelhilfe ist im Rahmen des #WirVsVirus-Hackathons im März 2020 entstanden.</h3>

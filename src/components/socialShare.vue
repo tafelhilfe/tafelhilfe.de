@@ -1,24 +1,30 @@
 <template>
   <div class="bg-secondary">
     <div
-      id=""
-      class="container-lg py-8 content text-white text-center d-flex align-items-center flex-column"
+      class="container-lg py-8 content text-white text-center d-flex align-items-center flex-column mt-0 mt-lg-8"
     >
       <h1 class="mb-4">Verbreite unsere Message!</h1>
       <p style="font-size: 1.5rem; max-width: 50rem;" class="text-xl-center">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit nisi odit
-        consequuntur soluta, praesentium deleniti ipsum natus.
+        Erzähl Deinen Freund*innen von #tafelhilfe und sammle Karma-Punkte.
       </p>
       <div>
         <div class="d-flex flex-wrap justify-content-center">
-          <a v-for="item in items" :key="item.name" class="bg-secondary cursor-pointer shadow-lg rounded-pill px-3 py-2 m-2 ">
+          <a
+            v-for="item in items"
+            :key="item.name"
+            :href="item.link"
+            :target="item.target ? item.target : '_blank'"
+            class="text-white px-3 py-2 m-2 bg-secondary cursor-pointer shadow-lg rounded-pill"
+          >
             <div class="d-flex align-items-center">
               <div
                 class="text-white"
                 style="height: 1.75rem; width: 1.75rem"
                 v-html="item.icon"
               />
-              <span class="ml-2" style="font-size: 1.25rem;">{{ item.name }}</span>
+              <span class="ml-2" style="font-size: 1.25rem;">
+                {{ item.name }}
+              </span>
             </div>
           </a>
         </div>
@@ -42,27 +48,37 @@ export default {
       items: [
         {
           name: 'Twitter',
-          icon: twitterIcon
+          icon: twitterIcon,
+          link:
+            'https://twitter.com/intent/tweet?text="Die Tafeln brauchen Deine Hilfe. Informiere Dich auf www.tafelhilfe.de, wie Du die Tafel in Deiner Nähe unterstützen kannst. Lass uns gemeinsam dafür sorgen, dass alle satt werden."&url=https://tafelhilfe.de'
         },
         {
           name: 'Instagram',
-          icon: instagramIcon
+          icon: instagramIcon,
+          link: 'https://instagram.com/tafelhilfe'
         },
         {
           name: 'Facebook',
-          icon: facebookIcon
+          icon: facebookIcon,
+          link:
+            'https://www.facebook.com/sharer.php?u= https%3A%2F%2Ftafelhilfe.de'
         },
         {
           name: 'WhatsApp',
-          icon: whatsAppIcon
+          icon: whatsAppIcon,
+          link: 'whatsapp://send?text=The text to share!',
+          target: '_top'
         },
         {
           name: 'Mail',
-          icon: mailIcon
+          icon: mailIcon,
+          link: ' mailto:?subject=Die%20Tafeln%20brauchen%20Deine%20Hilfe!&body=Informiere%20Dich%20auf%20www.tafelhilfe.de%2C%20wie%20Du%20die%20Tafel%20in%20Deiner%20N%C3%A4he%20unterst%C3%BCtzen%20kannst.%20Lass%20uns%20gemeinsam%20daf%C3%BCr%20sorgen%2C%20dass%20alle%20satt%20werden.'
         },
         {
           name: 'LinkedIn',
-          icon: linkedinIcon
+          icon: linkedinIcon,
+          link:
+            'https://www.linkedin.com/shareArticle?mini=true&url=https://tafelhilfe.de&title=Tafelhilfe'
         }
       ]
     }

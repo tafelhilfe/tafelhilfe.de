@@ -1,6 +1,6 @@
 <template>
   <div class="content container">
-    <div class="mx-auto py-6 mt-8">
+    <div class="mx-auto py-6">
 
       <h1>Datenschutzerkl&auml;rung</h1>
       <h2>1. Datenschutz auf einen Blick</h2>

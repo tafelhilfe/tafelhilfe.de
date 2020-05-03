@@ -1,6 +1,6 @@
 <template>
   <div class="content container">
-    <div class="mx-auto py-6 mt-8">
+    <div class="mx-auto py-6">
       <div class="px-4 py-4">
         <h1>Influencer</h1>
       </div>
