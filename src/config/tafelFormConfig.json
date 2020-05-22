@@ -75,6 +75,7 @@
     "name": "contactForm",
     "options": {
       "choices": ["E-Mail", "Telefon"]
-    }
+    },
+    "validation": "required"
   }
 ]

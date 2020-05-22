@@ -55,7 +55,10 @@
               </b-form>
             </div>
           </div>
-          <div v-if="visibleTafeln.length > 0" class="mx-md-8">
+          <div v-if="state === 'LOADING'">
+            <b-spinner />
+          </div>
+          <div v-if="visibleTafeln.length > 0 && state === 'LOADED'" class="mx-md-8">
             <h3>Tafeln in deiner Nähe</h3>
             <div class="mb-4">
               <ul class="list-group shadow mt-4">
@@ -100,7 +103,8 @@ export default {
       plz: '',
       nearTafeln: [], // all Tafeln near the current PLZ
       visibleTafeln: [], // all Tafeln visible in the table
-      errorVisible: false
+      errorVisible: false,
+      state: 'START'
     }
   },
   computed: {
@@ -132,6 +136,7 @@ export default {
   },
   methods: {
     findByPlz() {
+      this.state = 'LOADING'
       this.errorVisible = false
       this.nearTafeln = []
       if(this.plz.length > 0 && this.plz.length < 6) {
@@ -141,6 +146,7 @@ export default {
       }
     },
     foundTafeln(value) {
+      this.state = 'LOADED'
       this.visibleTafeln = []
       this.nearTafeln = value
       this.loadTafeln()

@@ -12,6 +12,8 @@ export default {
         isNext: true,
         formLength: this.formFields.length,
         isComplete: false,
+        submitStatus: 'NOT',
+        disclaimer: false,
         isValid: false,
         nextField: 0,
         backStack: []
@@ -46,9 +48,12 @@ export default {
   methods: {
     next() {
       this.formState.isNext = true
-      this.checkData()
-      this.formState.backStack.push(this.formState.activeField)
-      this.isCurrentFieldValid ? this.proceed() : this.decline('.field-area')
+      if (this.formState.activeField === 6 && this.formState.isComplete) {
+        this.submit()
+      } else {
+        this.checkData()
+        this.isCurrentFieldValid ? this.proceed() : this.decline('.field-area')
+      }
     },
     back() {
       this.formState.isNext = false
@@ -57,17 +62,26 @@ export default {
     submit() {
       this.formState.isNext = true
       this.isCurrentFieldValid ? this.proceed() : ''
+      this.formState.submitStatus = 'SENDING'
+      this.$api
+        .post('/status', this.$store.state.lead.formData)
+        .then((res) => {
+          this.formState.submitStatus = 'DONE'
+        })
+        .catch((e) => {
+          this.formState.submitStatus = 'ERROR'
+        })
     },
     proceed() {
-      if(this.formState.activeField < this.formState.nextField) {
+      this.formState.backStack.push(this.formState.activeField)
+      if (this.formState.activeField < this.formState.nextField) {
         this.formState.activeField = this.formState.nextField
       } else {
         this.isLastField ? this.formState.activeField++ : ''
       }
     },
     checkData() {
-      if ((this.formData.open === true)) {
-        console.log("Removing openAgain")
+      if (this.formData.open === true) {
         delete this.formData.openAgain
         delete this.$store.state.lead.formData.openAgain
       }

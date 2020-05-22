@@ -3,6 +3,9 @@ import formConfig from '../../config/tafelFormConfig.json'
 const mutations = {
   updateField(state, payload) {
     state.formData[payload.key] = payload.value
+  },
+  updateContact(state, payload) {
+    state.formData.contactData[payload.key] = payload.value
   }
 }
 
@@ -12,7 +15,6 @@ const state = {
 
 const getters = {
   plz: (state) => {
-    console.log(state.formData.plz)
     return state.formData.plz
   }
 }

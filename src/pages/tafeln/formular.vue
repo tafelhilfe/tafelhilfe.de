@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-flex align-items-center justify-content-center">
+  <div class="d-flex">
     <FormConfigProvider />
   </div>
 </template>

@@ -1,6 +1,6 @@
 /* eslint-disable nuxt/no-cjs-in-config */
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
   srcDir: 'src/',
   /*
    ** Headers of the page
@@ -137,7 +137,7 @@ module.exports = {
     vendor: ['axios', 'map-promisify']
   },
   env: {
-    TAFELHILFE_API_KEY: 'BQFtUCgMdC6bjABxiQ27A1hZBQydwTUv6hvuxXgZ',
+    TAFELHILFE_API_KEY: 'JGUwV4r8zW4QlbtuSOdXQ2T4ISmwWL6A6Ck1KmpW',
     MAPBOX_API_KEY:
       'pk.eyJ1IjoibGdhc3RsZXIiLCJhIjoiY2s5NDNlaW1oMDFtZjNnb2YzczY5ajZqMCJ9.K8kUn4MHA3WhzLFxFfoZFQ'
   }

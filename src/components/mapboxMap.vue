@@ -1,5 +1,5 @@
 <template>
-  <no-ssr>
+  <client-only>
     <MglMap
       :interactive="true"
       :center="tafeln.length > 0 ? tafeln[0].coords : [10.0183, 51.1334]"
@@ -37,7 +37,7 @@
         </MglPopup>
       </MglMarker>
     </MglMap>
-  </no-ssr>
+  </client-only>
 </template>
 
 <script>

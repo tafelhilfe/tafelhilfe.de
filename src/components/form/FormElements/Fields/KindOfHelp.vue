@@ -108,9 +108,6 @@ export default {
         : (el.checked = false)
     }
   },
-  mounted() {
-    console.log(this.data)
-  },
   props: {
     value: {
       required: false,
@@ -122,10 +119,14 @@ export default {
   },
   data() {
     return {
-      selectedValues: [],
+      selectedValues:
+        this.$store.state.lead.formData.kindOfHelp.choices === undefined
+          ? []
+          : this.$store.state.lead.formData.kindOfHelp.choices,
       text: '',
       options: this.data.choices,
-      noHelp: false
+      noHelp:
+        !this.$store.state.lead.formData.kindOfHelp.needHelp === false ? false : ''
     }
   },
   watch: {

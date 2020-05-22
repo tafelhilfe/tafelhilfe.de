@@ -1,5 +1,5 @@
 <template>
-  <form class="form-template container p-0 pb-4 p-lg-16" @submit.prevent="submit">
+  <form class="form-template container p-0 pb-4" @submit.prevent="next">
     <!-- Form Template -->
     <template v-for="(field, key) in formFields">
       <FieldGroup :key="`${_uid}-${field.name}`" :field-id="key">
@@ -22,6 +22,7 @@
               updateField({ key: field.name, value: formData[field.name] })
             "
             @nextField="setNextField"
+            @validated="validated(field)"
           />
         </div>
       </FieldGroup>
@@ -45,7 +46,7 @@ import formMixin from '../../mixins/formMixin'
 import FieldGroup from './FormElements/FieldGroup.vue'
 import FieldError from './FormElements/FieldError.vue'
 import FieldLabel from './FormElements/FieldLabel.vue'
-import FormResult from "@/components/form/FormElements/FormResult";
+import FormResult from "@/components/form/FormElements/Fields/FormResult";
 export default {
   name: 'FormTemplate',
   components: {
@@ -69,6 +70,9 @@ export default {
     }),
     setNextField(value) {
       this.formState.nextField = value
+    },
+    validated(field) {
+      this.fields[field.name].valid = true
     }
   }
 }

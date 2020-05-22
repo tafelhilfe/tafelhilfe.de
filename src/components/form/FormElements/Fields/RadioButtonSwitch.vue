@@ -52,17 +52,11 @@ export default {
   props: ['data', 'value'],
   data() {
     return {
-      options: this.data.choices,
+      options: this.data.choices
     }
-  },
-  mounted() {
-    console.log('Mounted...')
-    console.log(this.data)
   },
   methods: {
     updated(event) {
-      console.log('Updated...')
-      console.log(event.target.id)
       const choice = this.data.choices[event.target.id]
       this.$emit('nextField', choice.nextField)
       this.$emit('input', choice.value)
