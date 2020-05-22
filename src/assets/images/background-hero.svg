@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="660.931" height="710.114"
+     viewBox="0 0 660.931 710.114">
+  <defs>
+    <style>
+      .a{fill:#0e9f6e;}.b{filter:url(#i);}.c{filter:url(#g);}.d{filter:url(#e);}.e{filter:url(#c);}.f{filter:url(#a);}
+    </style>
+    <filter id="a" x="9.391" y="139.026" width="638.14" height="437.208" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="b"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="b"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="c" x="118.964" y="278.759" width="530.917" height="368.243" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="d"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="d"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="e" x="205.22" y="398.652" width="455.711" height="311.462" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="f"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="f"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="g" x="0" y="55.02" width="530.917" height="368.243" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="h"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="h"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="i" x="8.007" y="0" width="417.598" height="295.276" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="j"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="j"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(0.883, -0.469, 0.469, 0.883, -5696.084, 3035.107)">
+    <g transform="translate(6288.507 405.887)">
+      <g class="f" transform="matrix(0.88, 0.47, -0.47, 0.88, 165.73, -411.58)">
+        <rect class="a" width="585.088" height="99.129" transform="translate(46.89 441.21) rotate(-28)"/>
+      </g>
+    </g>
+    <g transform="translate(6344.208 534.527)">
+      <g class="e" transform="matrix(0.88, 0.47, -0.47, 0.88, 110.03, -540.22)">
+        <rect class="a" width="473.686" height="80.255" transform="translate(156.46 528.64) rotate(-28)"/>
+      </g>
+    </g>
+    <g transform="translate(6379.747 651.418)">
+      <g class="d" transform="matrix(0.88, 0.47, -0.47, 0.88, 74.49, -657.11)">
+        <rect class="a" width="402.608" height="53.739" transform="translate(242.72 615.17) rotate(-28)"/>
+      </g>
+    </g>
+    <g transform="translate(6344.208 281.127)">
+      <g class="c" transform="matrix(0.88, 0.47, -0.47, 0.88, 110.03, -286.82)">
+        <rect class="a" width="473.686" height="80.255" transform="translate(37.5 304.9) rotate(-28)"/>
+      </g>
+    </g>
+    <g transform="translate(6403.042 187.531)">
+      <g class="b" transform="matrix(0.88, 0.47, -0.47, 0.88, 51.2, -193.22)">
+        <rect class="a" width="356.019" height="60.18" transform="translate(45.51 194.64) rotate(-28)"/>
+      </g>
+    </g>
+  </g>
+</svg>

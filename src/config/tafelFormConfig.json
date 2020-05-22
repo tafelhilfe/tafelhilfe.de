@@ -1,0 +1,81 @@
+[
+  {
+    "type": "radioSwitch",
+    "label": "Wie ist Ihr aktueller Status?",
+    "name": "open",
+    "options": {
+      "choices": [
+        {
+          "text": "Wir haben geöffnet",
+          "nextField": 2,
+          "value": true
+        },
+        {
+          "text": "Wir haben geschlossen",
+          "nextField": 1,
+          "value": false
+        }
+      ]
+    },
+    "validation": "required"
+  },
+  {
+    "type": "radioSwitch",
+    "label": "Wollen Sie in naher Zukunft wieder öffnen?",
+    "name": "openAgain",
+    "options": {
+      "choices": [
+        {
+          "text": "Ja",
+          "nextField": 2,
+          "value": true
+        },
+        {
+          "text": "Nein",
+          "nextField": 3,
+          "value": false
+        }
+      ]
+    },
+    "validation": "required"
+  },
+  {
+    "type": "kindOfHelp",
+    "label": "Brauchen Sie Hilfe?",
+    "name": "kindOfHelp",
+    "options": {
+      "text": "",
+      "choices": [
+        "Lebensmittelabholung", "Lebensmittel liefern", "Lebensmittel sortieren, säubern, verpacken", "Lebensmittelausgabe", "Unterstützung beim Online-Auftritt der Tafel"
+      ]
+    },
+    "validation": "required"
+  },
+  {
+    "type": "text",
+    "label": "Geben Sie bitte Ihre Postleitzahl ein, damit wir Ihren Status aktualisieren können.",
+    "name": "plz",
+    "options": {
+      "attrs": {
+        "placeholder": "Postleizahl"
+      }
+    },
+    "validation": "required"
+  },
+  {
+    "type": "contactDataValidation",
+    "label": "Stimmen Ihre Kontaktdaten (Adresse, Telefonnummer und E-Mail)?",
+    "name": "contactData",
+    "options": {},
+    "validation": "required"
+  },
+  {
+    "type": "radio",
+    "label": "Wie wollen Sie kontaktiert werden?",
+    "name": "contactForm",
+    "options": {
+      "choices": ["E-Mail", "Telefon"]
+    },
+    "validation": "required"
+  }
+]

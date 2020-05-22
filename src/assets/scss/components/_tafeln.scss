@@ -1,0 +1,13 @@
+.custom-radio,
+.custom-checkbox {
+  padding: 0 !important;
+  & .custom-control-label {
+    padding: .5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

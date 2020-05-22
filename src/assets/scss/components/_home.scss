@@ -1,0 +1,29 @@
+// Content Home
+.vp {
+  height: 50vh;
+  @media (max-width: 575.98px) and (orientation : landscape) {
+    height: 100vh;
+  }
+  @media (min-width: 576px) {
+    height: 100vh;
+  }
+  @media (min-width: 768px) and (max-width: 992px) and (orientation : portrait) {
+    height: 50vh;
+  }
+}
+
+.bg-tafeln {
+  background: linear-gradient(
+                  rgba($primary, .8),
+                  rgba($primary, .8)
+  ), url('~assets/images/home_tafeln.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.bg-helfer {
+  background: linear-gradient(
+                  rgba($secondary, .8),
+                  rgba($secondary, .8)
+  ), url('~assets/images/home_volunteer.jpg') no-repeat center center;
+  background-size: cover;
+}
