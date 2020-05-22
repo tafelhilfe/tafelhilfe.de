@@ -1,32 +1,32 @@
 <template>
   <div id="main">
-    <myheader/>
-    <nuxt id="content" class="mt-20 mt-sm-32"/>
-    <myfooter id="footer"/>
+    <myheader />
+    <nuxt id="content" class="mt-20 mt-sm-32" />
+    <myfooter id="footer" />
   </div>
 </template>
 <script>
-  import Myfooter from '../components/footer'
-  import Myheader from '../components/default-header'
+import Myfooter from '../components/footer'
+import Myheader from '../components/default-header'
 
-  export default {
-    components: {
-      Myheader,
-      Myfooter
-    },
+export default {
+  components: {
+    Myheader,
+    Myfooter
   }
+}
 </script>
 
 <style>
-  #main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  #content {
-    flex: 1 0 auto;
-  }
-  #footer {
-    flex-shrink: 0;
-  }
+#main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#content {
+  flex: 1 0 auto;
+}
+#footer {
+  flex-shrink: 0;
+}
 </style>

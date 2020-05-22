@@ -12,7 +12,7 @@
           <p v-html="tafeln.colLeft.text" />
         </div>
         <div class="col-12 col-md">
-          <h5>{{ tafeln.colRight.headline }} Hello</h5>
+          <h5>{{ tafeln.colRight.headline }}</h5>
           <p v-html="tafeln.colRight.text" />
         </div>
       </b-row>
