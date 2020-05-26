@@ -12,6 +12,18 @@ Our goal is to connect motivated young volunteers with blackboards in their envi
 
 If you are motivated to support us and help the food banks in Germany then please contact us. [kontakt@tafelhilfe.de](mailto:kontakt@tafelhilfe.de)
 
+## Good first Issues
+
+These are some good issues to get started:
+* [#3 Refactor and remove unused code](https://github.com/tafelhilfe/tafelhilfe.de/issues/3)
+* [#1 Restyle and improve the map](https://github.com/tafelhilfe/tafelhilfe.de/issues/1)
+
+## No code Issues
+
+Even if you do not have any programming skills you are welcome to support us. Here are some problems where we could use your support
+
+* [#4 Review & create content](https://github.com/tafelhilfe/tafelhilfe.de/issues/4)
+
 ## Get Started (Build Setup)
 
 ```bash
