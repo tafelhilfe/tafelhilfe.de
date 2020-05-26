@@ -10,7 +10,7 @@ Our goal is to connect motivated young volunteers with blackboards in their envi
 
 ## Participate
 
-If you are motivated to support us and help the food banks in Germany then please contact us. ![mailto:kontakt@tafelhilfe.de](kontakt@tafelhilfe.de)
+If you are motivated to support us and help the food banks in Germany then please contact us. [kontakt@tafelhilfe.de](mailto:kontakt@tafelhilfe.de)
 
 ## Get Started (Build Setup)
 
